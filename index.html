@@ -8,6 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Vazirmatn Font for Premium Persian Typography -->
     <link href="https://cdn.jsdelivr.net/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Three.js for Real-Time 3D Rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -68,7 +71,7 @@
                 <div class="border-b border-zinc-800 pb-4">
                     <h2 class="text-lg font-bold text-amber-500 flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0L8.07 4.71c-.3.04-.6.1-.9.18L5.78 3.48c-1.38-.86-3.12.5-2.7 2.11L3.9 7.16c-.2.23-.37.49-.51.77L1.8 7.51c-1.42-.58-2.73 1.1-1.92 2.36l1.37 1.83c-.04.14-.07.28-.09.43l-1.93.38c-1.56.31-1.56 2.53 0 2.84l1.93.38c.02.15.05.29.09.43l-1.37 1.83c-.81 1.26.5 2.94 1.92 2.36l1.59-.42c.14.28.31.54.51.77l-.82 1.57c-.42 1.61 1.32 2.97 2.7 2.11l1.39-1.41c.3.08.6.14.9.18l.44 1.54c.38 1.56 2.6 1.56 2.98 0l.44-1.54c.3-.04.6-.1.9-.18l1.39 1.41c1.38.86 3.12-.5 2.7-2.11l-.82-1.57c.2-.23.37-.49.51-.77l1.59.42c1.42.58 2.73-1.1 1.92-2.36l-1.37-1.83c.04-.14.07-.28.09-.43l1.93.38c1.56-.31 1.56-2.53 0-2.84l-1.93-.38c-.02-.15-.05-.29-.09-.43l1.37-1.83c.81-1.26-.5-2.94-1.92-2.36l-1.59.42c-.14-.28-.31-.54-.51-.77l.82-1.57c.42-1.61-1.32-2.97-2.7-2.11l-1.39 1.41c-.3-.08-.6-.14-.9-.18l-.44-1.54zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0L8.07 4.71c-.3.04-.6.1-.9.18L5.78 3.48c-1.38-.86-3.12.5-2.7 2.11L3.9 7.16c-.2.23-.37.49-.51.77L1.8 7.51c-1.42-.58-2.73 1.1-1.92 2.36l1.37 1.83c-.04.14-.07.28-.09.43l-1.93.38c-1.56.31-1.56 2.53 0 2.84l1.93.38c.02.15.05.29.09.43l-1.37 1.83c-.81 1.26.5 2.94 1.92 2.36l1.59-.42c.14.28.31.54.51.77l-.82 1.57c-.42 1.61 1.32 2.97 2.7 2.11l1.39-1.41c.3.08.6.14.9.18l.44 1.54c.38 1.56 2.6 1.56 2.98 0l.44-1.54c.3-.04.6-.1.9-.18l1.39 1.41c1.38.86 3.12-.5 2.7-2.11l-.82-1.57c.2-.23.37-.49.51-.77l1.59.42c1.42.58 2.73-1.1 1.92-2.36l-1.37-1.83c.04-.14.07-.28.09-.43l1.93.38c1.56-.31 1.56-2.53 0-2.84l-1.93.38c-.02-.15-.05-.29-.09-.43l1.37-1.83c.81-1.26-.5-2.94-1.92-2.36l-1.59.42c-.14-.28-.31-.54-.51-.77l.82-1.57c.42-1.61-1.32-2.97-2.7-2.11l-1.39 1.41c-.3-.08-.6-.14-.9-.18l-.44-1.54zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
                         </svg>
                         تنظیمات ترخیص و خودرو
                     </h2>
@@ -220,7 +223,7 @@
                         
                         <!-- Toggle View Mode Switcher -->
                         <div class="flex items-center gap-1 bg-zinc-950 p-1 rounded-xl border border-zinc-800">
-                            <button type="button" onclick="setViewMode('technical')" id="btn-view-tech" class="px-3 py-1 text-[10px] font-bold rounded-lg transition-all text-zinc-400 hover:text-white">طراحی فنی</button>
+                            <button type="button" onclick="setViewMode('technical')" id="btn-view-tech" class="px-3 py-1 text-[10px] font-bold rounded-lg transition-all text-zinc-400 hover:text-white">طراحی فنی ۳ بعدی</button>
                             <button type="button" onclick="setViewMode('real')" id="btn-view-real" class="px-3 py-1 text-[10px] font-bold rounded-lg transition-all bg-amber-500 text-black">تصویر واقعی</button>
                         </div>
                     </div>
@@ -231,71 +234,17 @@
                         <div class="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-25"></div>
                         <div class="absolute w-64 h-16 bg-amber-500/5 rounded-full blur-3xl bottom-6"></div>
 
-                        <!-- 1. TECHNICAL NEON VIEW CONTAINER -->
-                        <div id="techViewContainer" class="hidden w-full h-full flex items-center justify-center p-4">
-                            <!-- Main Interactive SVG with distinct class layers -->
-                            <svg id="interactiveCarSvg" class="w-full max-w-[440px] h-auto text-zinc-500" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
-                                        <feGaussianBlur stdDeviation="5" result="blur" />
-                                        <feMerge>
-                                            <feMergeNode in="blur" />
-                                            <feMergeNode in="SourceGraphic" />
-                                        </feMerge>
-                                    </filter>
-                                </defs>
+                        <!-- 1. TECHNICAL NEON 3D VIEW CONTAINER -->
+                        <div id="techViewContainer" class="hidden w-full h-full flex items-center justify-center relative">
+                            <!-- Three.js 3D WebGL Canvas -->
+                            <canvas id="threeJsCanvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+                            
+                            <!-- Static overlay indicator telling user they can drag in 3D -->
+                            <div class="absolute bottom-3 left-3 text-[9px] text-zinc-500 pointer-events-none select-none">
+                                <i class="fas fa-arrows-alt mr-1"></i> مدل ۳ بعدی تعاملی است، بکشید و بچرخانید
+                            </div>
 
-                                <!-- Sedan Group -->
-                                <g id="car-g-sedan" class="transition-opacity duration-300">
-                                    <path d="M40 155c0-5 15-20 40-25l75-12 45-48h130l35 43 45 15 50 12c15 5 25 10 25 20v20H40v-25z" class="stroke-amber-500" stroke-width="2" filter="url(#neon-glow)" fill="none"/>
-                                    <path d="M155 118l30-38h110l25 38" class="stroke-amber-500/40" stroke-width="1.5" fill="none"/>
-                                    <circle cx="115" cy="175" r="24" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
-                                    <circle cx="115" cy="175" r="8" class="fill-amber-500"/>
-                                    <circle cx="375" cy="175" r="24" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
-                                    <circle cx="375" cy="175" r="8" class="fill-amber-500"/>
-                                </g>
-
-                                <!-- SUV Group (Hidden by default) -->
-                                <g id="car-g-suv" class="hidden transition-opacity duration-300">
-                                    <path d="M40 155c0-10 10-25 35-28l90-12 35-38h160l25 32h50c15 0 25 15 25 25v26H40v-15z" class="stroke-amber-500" stroke-width="2" filter="url(#neon-glow)" fill="none"/>
-                                    <path d="M200 70h100" class="stroke-amber-500" stroke-width="2" fill="none"/>
-                                    <path d="M210 70v7M250 70v7M290 70v7" class="stroke-amber-500/60" stroke-width="1.5" fill="none"/>
-                                    <path d="M165 115l25-32h140l20 32" class="stroke-amber-500/40" stroke-width="1.5" fill="none"/>
-                                    <circle cx="115" cy="175" r="28" class="stroke-amber-500/80 fill-zinc-950" stroke-width="2"/>
-                                    <circle cx="115" cy="175" r="10" class="fill-amber-500"/>
-                                    <circle cx="375" cy="175" r="28" class="stroke-amber-500/80 fill-zinc-950" stroke-width="2"/>
-                                    <circle cx="375" cy="175" r="10" class="fill-amber-500"/>
-                                </g>
-
-                                <!-- Sports Group (Hidden by default) -->
-                                <g id="car-g-sports" class="hidden transition-opacity duration-300">
-                                    <path d="M30 160c0-5 10-15 30-18l110-15 55-48h90l65 53h75c10 0 15 10 15 15v13H30v-10z" class="stroke-amber-500" stroke-width="2" filter="url(#neon-glow)" fill="none"/>
-                                    <path d="M435 125l25-10v10" class="stroke-amber-500" stroke-width="2.5" fill="none"/>
-                                    <path d="M170 127l45-43h75l45 43" class="stroke-amber-500/40" stroke-width="1.5" fill="none"/>
-                                    <circle cx="115" cy="175" r="22" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
-                                    <circle cx="115" cy="175" r="8" class="fill-amber-500"/>
-                                    <circle cx="375" cy="175" r="22" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
-                                    <circle cx="375" cy="175" r="8" class="fill-amber-500"/>
-                                </g>
-
-                                <!-- EV Group (Hidden by default) -->
-                                <g id="car-g-ev" class="hidden transition-opacity duration-300">
-                                    <path d="M45 155c0-10 15-25 35-27l85-5 35-37h120l50 35h55c10 0 15 15 15 25v14H45z" class="stroke-amber-500" stroke-width="2" filter="url(#neon-glow)" fill="none"/>
-                                    <path d="M165 123l25-32h95l35 32" class="stroke-amber-500/40" stroke-width="1.5" fill="none"/>
-                                    <path d="M45 140h35" class="stroke-cyan-400" stroke-width="1.5"/>
-                                    <path d="M440 140h15" class="stroke-red-500" stroke-width="1.5"/>
-                                    <circle cx="115" cy="175" r="24" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
-                                    <circle cx="115" cy="175" r="14" class="fill-zinc-900 stroke-amber-500/30" stroke-width="1"/>
-                                    <circle cx="115" cy="175" r="4" class="fill-amber-500"/>
-                                    <circle cx="375" cy="175" r="24" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
-                                    <circle cx="375" cy="175" r="14" class="fill-zinc-900 stroke-amber-500/30" stroke-width="1"/>
-                                    <circle cx="375" cy="175" r="4" class="fill-amber-500"/>
-                                </g>
-
-                                <line x1="10" y1="206" x2="490" y2="206" class="stroke-zinc-800" stroke-width="2"/>
-                            </svg>
-
-                            <!-- Pulsing HTML Hotspots (Completely reliable click targets over SVG) -->
+                            <!-- Pulsing HTML Hotspots (Completely reliable click targets over Canvas) -->
                             <!-- Hotspot: Engine -->
                             <button onclick="focusAndHighlight('section-engine')" class="absolute top-[48%] left-[16%] flex flex-col items-center group/hot focus:outline-none">
                                 <span class="relative flex h-5 w-5">
@@ -440,7 +389,7 @@
                             </div>
 
                             <!-- Classic/Historic Plate Layout -->
-                            <div id="plate-layout-classic" class="hidden w-full h-full flex items-center justify-between text-black font-bold">
+                            <div id="plate-layout-classic" class="hidden w-full h-full flex items-center justify-between text-white font-bold bg-amber-950 border-2 border-amber-600 rounded-lg">
                                 <div class="w-[45px] h-full bg-amber-900 rounded-r-[6px] flex flex-col items-center justify-center py-1 border-l border-amber-600">
                                     <span class="text-[8px] text-amber-300">تاریخی</span>
                                     <span class="text-[7px] text-zinc-400 mt-1">HISTORIC</span>
@@ -587,7 +536,7 @@
         // Global Static Configurations (Security Locks)
         const specialistWhatsAppNumber = "989121234567"; // شماره تلفن اصلی کارشناس هلدینگ عدنان (محفوظ از چشم کاربر عمومی)
         
-        // --- SECURE CAR DATABASE (IN-MEMORY STABLE STORAGE) ---
+        // --- SECURE CAR DATABASE (IN-MEMORY STABLE STORAGE WITH ACCURATE SHOTS) ---
         const carDatabase = [
             {
                 id: "camry",
@@ -610,7 +559,7 @@
                 fuel: "gasoline",
                 cc: 2500,
                 price: 34000,
-                imgUrl: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&q=80&w=800",
+                imgUrl: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=800",
                 badge: "شاسی‌بلند خانوادگی"
             },
             {
@@ -699,7 +648,7 @@
             }
         ];
 
-        // High Quality Generic placeholders for Custom Mode fallback based on Class
+        // High Quality Generic fallbacks to prevent unrelated/broken image duplicates
         const classFallbackImages = {
             sedan: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=800",
             suv: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800",
@@ -710,6 +659,10 @@
         let currentPlateType = 'melli';
         let currentCarClass = 'sedan';
         let viewMode = 'real'; // Toggle views: 'technical' or 'real'
+
+        // Three.js 3D engine state variables
+        let scene, camera, renderer, car3DGroup, wheels = [];
+        let isDragging = false, previousMousePosition = { x: 0, y: 0 };
 
         // Selectors
         const carDbSelect = document.getElementById('carDbSelect');
@@ -759,9 +712,10 @@
         // Initialize App
         window.onload = function() {
             populateDatabaseDropdown();
+            init3DEngine(); // Ignite Three.js canvas
             onDatabaseCarSelect(); // Set default selected Camry
             syncCustomPlateText();
-            setViewMode('real'); // Default beautiful gallery image view
+            setViewMode('technical'); // Default gorgeous 3D technical viewport view
         };
 
         // Populate database items into select dropdown
@@ -855,6 +809,8 @@
                     loaderElement.style.opacity = '0';
                     setTimeout(() => { loaderElement.style.display = 'none'; }, 300);
                 };
+                
+                update3DGeometry(currentCarClass);
                 return;
             }
 
@@ -877,6 +833,8 @@
                 loaderElement.style.opacity = '0';
                 setTimeout(() => { loaderElement.style.display = 'none'; }, 300);
             };
+
+            update3DGeometry(car.class);
         }
 
         function getPersianClassName(cls) {
@@ -914,11 +872,212 @@
                 btnReal.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all text-zinc-400 hover:text-white";
                 techContainer.classList.remove('hidden');
                 realContainer.classList.add('hidden');
+                // Trigger renderer size refresh
+                onWindowResize();
             } else {
                 btnReal.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all bg-amber-500 text-black shadow";
                 btnTech.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all text-zinc-400 hover:text-white";
                 realContainer.classList.remove('hidden');
                 techContainer.classList.add('hidden');
+            }
+        }
+
+        // 3D Engine Initialization (Constructs fully responsive 3D WebGL car preview)
+        function init3DEngine() {
+            const canvas = document.getElementById('threeJsCanvas');
+            const container = document.getElementById('techViewContainer');
+            
+            // Scene Setup
+            scene = new THREE.Scene();
+            scene.fog = new THREE.FogExp2(0x09090b, 0.015);
+
+            // Camera Setup
+            camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
+            camera.position.set(6, 4, 7);
+
+            // Renderer Setup
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+
+            // Ambient & Point Lighting
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+            scene.add(ambientLight);
+
+            const amberPointLight = new THREE.PointLight(0xd97706, 2, 50);
+            amberPointLight.position.set(5, 5, 5);
+            scene.add(amberPointLight);
+
+            const cyanPointLight = new THREE.PointLight(0x22d3ee, 1, 50);
+            cyanPointLight.position.set(-5, 3, -5);
+            scene.add(cyanPointLight);
+
+            // Grid helper acting as futuristic platform
+            const gridHelper = new THREE.GridHelper(20, 20, 0xd97706, 0x27272a);
+            gridHelper.position.y = -1;
+            scene.add(gridHelper);
+
+            // Construct Car Group
+            car3DGroup = new THREE.Group();
+            scene.add(car3DGroup);
+
+            // Build Procedural wireframe elements
+            buildProceduralCarMesh('sedan');
+
+            // Listeners
+            window.addEventListener('resize', onWindowResize);
+            setup3DMouseEvents(canvas);
+
+            // Animation Frame Loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                // Slow ambient rotation if user is not actively dragging
+                if (!isDragging) {
+                    car3DGroup.rotation.y += 0.003;
+                }
+
+                // Animate spinning wheels to make it feel alive
+                wheels.forEach(wheel => {
+                    wheel.rotation.z -= 0.02;
+                });
+
+                renderer.render(scene, camera);
+            }
+            animate();
+        }
+
+        // Dynamic resize helper for responsive Three.js layout
+        function onWindowResize() {
+            const container = document.getElementById('techViewContainer');
+            if (camera && renderer) {
+                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(container.clientWidth, container.clientHeight);
+            }
+        }
+
+        // Custom Mouse / Touch drag to spin car 3D viewport
+        function setup3DMouseEvents(canvas) {
+            canvas.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                previousMousePosition = { x: e.clientX, y: e.clientY };
+            });
+
+            canvas.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const deltaMove = { x: e.clientX - previousMousePosition.x, y: e.clientY - previousMousePosition.y };
+                car3DGroup.rotation.y += deltaMove.x * 0.01;
+                car3DGroup.rotation.x += deltaMove.y * 0.01;
+                previousMousePosition = { x: e.clientX, y: e.clientY };
+            });
+
+            window.addEventListener('mouseup', () => { isDragging = false; });
+
+            // Touch support for tablets and mobile
+            canvas.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1) {
+                    isDragging = true;
+                    previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+                }
+            });
+
+            canvas.addEventListener('touchmove', (e) => {
+                if (!isDragging || e.touches.length !== 1) return;
+                const deltaMove = { x: e.touches[0].clientX - previousMousePosition.x, y: e.touches[0].clientY - previousMousePosition.y };
+                car3DGroup.rotation.y += deltaMove.x * 0.01;
+                car3DGroup.rotation.x += deltaMove.y * 0.01;
+                previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+            });
+
+            canvas.addEventListener('touchend', () => { isDragging = false; });
+        }
+
+        // Construct highly detailed neon wireframe structures depending on chosen Class
+        function buildProceduralCarMesh(carClass) {
+            // Clear current submeshes inside 3D group
+            while(car3DGroup.children.length > 0){
+                car3DGroup.remove(car3DGroup.children[0]);
+            }
+            wheels = [];
+
+            // Class-based Dimension Tuning
+            let chassisW = 3.2, chassisH = 0.5, chassisD = 1.6;
+            let cabinW = 1.8, cabinH = 0.6, cabinD = 1.4;
+            let cabinOffset = 0.1;
+            let wheelRad = 0.45, wheelThick = 0.25;
+            let wheelY = -0.4;
+            let neonColor = 0xd97706; // Amber neon theme
+
+            if (carClass === 'suv') {
+                chassisW = 3.3; chassisH = 0.8; chassisD = 1.7;
+                cabinW = 2.2; cabinH = 0.8; cabinD = 1.5;
+                cabinOffset = 0;
+                wheelRad = 0.55; wheelThick = 0.35;
+                wheelY = -0.3;
+            } else if (carClass === 'sports') {
+                chassisW = 3.5; chassisH = 0.35; chassisD = 1.8;
+                cabinW = 1.4; cabinH = 0.45; cabinD = 1.5;
+                cabinOffset = 0.4;
+                wheelRad = 0.42; wheelThick = 0.32;
+                wheelY = -0.35;
+                neonColor = 0xd97706;
+            } else if (carClass === 'ev') {
+                chassisW = 3.1; chassisH = 0.45; chassisD = 1.5;
+                cabinW = 1.7; cabinH = 0.55; cabinD = 1.35;
+                cabinOffset = 0.15;
+                wheelRad = 0.45; wheelThick = 0.25;
+                wheelY = -0.4;
+                neonColor = 0x22d3ee; // Futuristic cyan EV glow
+            }
+
+            // Material wireframe settings
+            const wireframeMat = new THREE.MeshBasicMaterial({ color: neonColor, wireframe: true, transparent: true, opacity: 0.85 });
+
+            // 1. CHASSIS MESH (Procedural block)
+            const chassisGeo = new THREE.BoxGeometry(chassisW, chassisH, chassisD);
+            const chassisMesh = new THREE.Mesh(chassisGeo, wireframeMat);
+            car3DGroup.add(chassisMesh);
+
+            // 2. CABIN MESH
+            const cabinGeo = new THREE.BoxGeometry(cabinW, cabinH, cabinD);
+            const cabinMesh = new THREE.Mesh(cabinGeo, wireframeMat);
+            cabinMesh.position.set(-cabinOffset, (chassisH/2) + (cabinH/2), 0);
+            car3DGroup.add(cabinMesh);
+
+            // 3. WHEELS (4 rotating toruses acting as tires)
+            const wheelGeo = new THREE.TorusGeometry(wheelRad, wheelThick, 8, 24);
+            const wheelPositions = [
+                { x: chassisW / 2.7, z: chassisD / 1.8 },
+                { x: chassisW / 2.7, z: -chassisD / 1.8 },
+                { x: -chassisW / 2.7, z: chassisD / 1.8 },
+                { x: -chassisW / 2.7, z: -chassisD / 1.8 }
+            ];
+
+            wheelPositions.forEach(pos => {
+                const wheelMesh = new THREE.Mesh(wheelGeo, wireframeMat);
+                wheelMesh.position.set(pos.x, wheelY, pos.z);
+                // Rotate wheel to stand upright on grid
+                wheelMesh.rotation.y = Math.PI / 2;
+                car3DGroup.add(wheelMesh);
+                wheels.push(wheelMesh);
+            });
+
+            // 4. FRONT LED HEADLIGHTS
+            const lightGeo = new THREE.SphereGeometry(0.08, 8, 8);
+            const headLightMat = new THREE.MeshBasicMaterial({ color: (carClass === 'ev' ? 0x22d3ee : 0xfff) });
+            const rightLight = new THREE.Mesh(lightGeo, headLightMat);
+            rightLight.position.set(chassisW / 2, 0, chassisD / 3.5);
+            const leftLight = new THREE.Mesh(lightGeo, headLightMat);
+            leftLight.position.set(chassisW / 2, 0, -chassisD / 3.5);
+            car3DGroup.add(rightLight);
+            car3DGroup.add(leftLight);
+        }
+
+        // Updates 3D dimensions when class or model switches
+        function update3DGeometry(carClass) {
+            if (car3DGroup) {
+                buildProceduralCarMesh(carClass);
             }
         }
 
@@ -964,14 +1123,6 @@
             if (activeBtn) {
                 activeBtn.className = "car-class-btn p-2 rounded-xl border text-center transition-all bg-amber-500/10 border-amber-500/50 text-amber-500";
             }
-
-            // Instantly toggle SVG car models visibility using absolute JS styling (safest approach)
-            ['sedan', 'suv', 'sports', 'ev'].forEach(cls => {
-                const group = document.getElementById(`car-g-${cls}`);
-                if (group) {
-                    group.style.display = (cls === className) ? 'block' : 'none';
-                }
-            });
 
             if (triggerStateSync) {
                 onManualInputChange();
@@ -1126,13 +1277,13 @@
             let days = 365;
             let percent = 100;
             let title = "میزان مرخصی و تردد سالانه (بدون محدودیت)";
-            let desc = "خودروهای دارای پلاک ملی هیچ‌گونه محدودیتی برای حضور در جاده‌ها و شهرهای سراسر کشور ندارند.";
+            let desc = "خودروهای دارای پلاک ملی هیچ‌گونه محدودیتی برای حضور در جاده‌ها و شهرهای سراسر کشور دارند.";
 
             if (currentPlateType === 'gozar') {
                 days = 90;
                 percent = 25; // 90 out of 365
                 title = "میزان مرخصی گذر موقت (۳ ماه در سال)";
-                desc = "خودروی گذر موقت باید پس از انقضای مهلت ۳ ماهه بلافاانے از کشور خارج یا به گمرک مربوطه تحویل داده شود.";
+                desc = "خودروی گذر موقت باید پس از انقضای مهلت ۳ ماهه بلافاصله از کشور خارج یا به گمرک مربوطه تحویل داده شود.";
             } else if (currentPlateType === 'azad') {
                 days = 30;
                 percent = 8; // 30 out of 365
