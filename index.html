@@ -762,21 +762,21 @@
             const cc = parseInt(carCCInput.value) || 0;
             const price = parseInt(carPriceSlider.value);
             
-            // Try to find a matching car in the database to snap back to
-            const matchedCar = carDatabase.find(car => 
-                car.id !== 'custom' &&
-                car.class === currentCarClass &&
-                car.fuel === fuel &&
-                car.cc === cc &&
-                car.price === price &&
-                car.year === year &&
-                car.cylinders === cylinders
-            );
+            // Stable Match Rule: Keep current database selection active if the user changes parameters
+            // but didn't switch the core car identity.
+            const selectedId = carDbSelect.value;
+            let currentCar = carDatabase.find(c => c.id === selectedId);
 
-            if (matchedCar) {
-                carDbSelect.value = matchedCar.id;
-                customModelWrapper.classList.add('hidden');
-                syncStateAndGallery(matchedCar);
+            // Only switch to 'custom' if they actively changed the class body or it was custom to begin with
+            if (currentCar && currentCar.id !== 'custom') {
+                if (currentCar.class !== currentCarClass) {
+                    carDbSelect.value = 'custom';
+                    customModelWrapper.classList.remove('hidden');
+                    syncStateAndGallery(null);
+                } else {
+                    // Update only numbers & calculations, preserve the stunning image of selected vehicle!
+                    syncStateAndGallery(currentCar);
+                }
             } else {
                 carDbSelect.value = 'custom';
                 customModelWrapper.classList.remove('hidden');
@@ -1065,7 +1065,7 @@
 
             // 4. FRONT LED HEADLIGHTS
             const lightGeo = new THREE.SphereGeometry(0.08, 8, 8);
-            const headLightMat = new THREE.MeshBasicMaterial({ color: (carClass === 'ev' ? 0x22d3ee : 0xfff) });
+            const headLightMat = new THREE.MeshBasicMaterial({ color: (carClass === 'ev' ? 0x22d3ee : 0xffffff) });
             const rightLight = new THREE.Mesh(lightGeo, headLightMat);
             rightLight.position.set(chassisW / 2, 0, chassisD / 3.5);
             const leftLight = new THREE.Mesh(lightGeo, headLightMat);
@@ -1100,13 +1100,8 @@
                     pNumL.focus();
                 }
                 
-                // Show tooltip feedback
-                const alertText = document.getElementById('activeHotspotAlert');
-                alertText.textContent = "بخش مربوطه فعال شد!";
-                
                 setTimeout(() => {
                     section.classList.remove('ring-2', 'ring-amber-500');
-                    alertText.textContent = "روی بخش‌های طلایی کلیک کنید";
                 }, 1500);
             }
         }
@@ -1387,7 +1382,7 @@
             dummy.select();
             
             try {
-                document.execCommand("copy");
+                document.execCommand('copy');
                 showModal("کپی موفقیت‌آمیز", "پیش‌فاکتور کامل با موفقیت کپی شد! می‌توانید آن را در هر پیام‌رسانی پیست کنید.", true);
             } catch (err) {
                 showModal("خطا در کپی", "متاسفانه دسترسی به حافظه موقت سیستم مقدور نیست.", false);
