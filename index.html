@@ -8,8 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Vazirmatn Font for Premium Persian Typography -->
     <link href="https://cdn.jsdelivr.net/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Three.js for Real-Time 3D Rendering -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     
     <style>
         body {
@@ -536,7 +534,7 @@
         // Global Static Configurations (Security Locks)
         const specialistWhatsAppNumber = "989121234567"; // شماره تلفن اصلی کارشناس هلدینگ عدنان (محفوظ از چشم کاربر عمومی)
         
-        // --- SECURE CAR DATABASE (IN-MEMORY STABLE STORAGE WITH ACCURATE SHOTS) ---
+        // --- SECURE CAR DATABASE (IN-MEMORY STABLE STORAGE WITH HIGHLY CURATED ACCURATE SHOTS) ---
         const carDatabase = [
             {
                 id: "camry",
@@ -547,7 +545,7 @@
                 fuel: "hybrid",
                 cc: 2500,
                 price: 28000,
-                imgUrl: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800",
+                imgUrl: "https://images.unsplash.com/photo-1623860841263-64f3316d8431?auto=format&fit=crop&q=80&w=800",
                 badge: "هیبریدی لوکس"
             },
             {
@@ -571,7 +569,7 @@
                 fuel: "ev",
                 cc: 0,
                 price: 39000,
-                imgUrl: "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&q=80&w=800",
+                imgUrl: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=800",
                 badge: "تمام الکتریکی مدرن"
             },
             {
@@ -631,7 +629,7 @@
                 fuel: "gasoline",
                 cc: 1600,
                 price: 22000,
-                imgUrl: "https://images.unsplash.com/photo-1623860841263-64f3316d8431?auto=format&fit=crop&q=80&w=800",
+                imgUrl: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800",
                 badge: "سدان اقتصادی و مقاوم"
             },
             {
@@ -964,8 +962,11 @@
                 btnReal.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all text-zinc-400 hover:text-white";
                 techContainer.classList.remove('hidden');
                 realContainer.classList.add('hidden');
-                // Trigger renderer size refresh
-                setTimeout(onWindowResize, 50);
+                
+                // CRITICAL FIXED: Instantly recalculate dimensions when tech view is active
+                setTimeout(() => {
+                    onWindowResize();
+                }, 10);
             } else {
                 btnReal.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all bg-amber-500 text-black shadow";
                 btnTech.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all text-zinc-400 hover:text-white";
@@ -1057,7 +1058,7 @@
         }
 
         // Custom Mouse / Touch drag to spin car 3D viewport
-        function setup3DMouseEvents(canvas) {
+        setup3DMouseEvents = function(canvas) {
             canvas.addEventListener('mousedown', (e) => {
                 isDragging = true;
                 previousMousePosition = { x: e.clientX, y: e.clientY };
