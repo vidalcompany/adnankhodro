@@ -229,7 +229,7 @@
                     </div>
 
                     <!-- Elegant Interactive Container holding both layouts -->
-                    <div class="relative w-full aspect-[2/0.95] bg-zinc-950/90 rounded-2xl border border-zinc-800/80 flex items-center justify-center overflow-hidden">
+                    <div id="canvasParent" class="relative w-full aspect-[2/0.95] bg-zinc-950/90 rounded-2xl border border-zinc-800/80 flex items-center justify-center overflow-hidden">
                         <!-- Tech Grid background -->
                         <div class="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-25"></div>
                         <div class="absolute w-64 h-16 bg-amber-500/5 rounded-full blur-3xl bottom-6"></div>
@@ -248,7 +248,7 @@
                             <!-- Hotspot: Engine -->
                             <button onclick="focusAndHighlight('section-engine')" class="absolute top-[48%] left-[16%] flex flex-col items-center group/hot focus:outline-none">
                                 <span class="relative flex h-5 w-5">
-                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-450 opacity-75"></span>
                                     <span class="relative inline-flex rounded-full h-5 w-5 bg-amber-500 border-2 border-zinc-950 flex items-center justify-center text-[9px] font-black text-black">M</span>
                                 </span>
                                 <span class="text-[9px] font-bold text-zinc-450 group-hover/hot:text-amber-500 bg-zinc-950/95 border border-zinc-800/80 px-1 rounded mt-1 transition-colors">موتور</span>
@@ -266,7 +266,7 @@
                             <!-- Hotspot: Price -->
                             <button onclick="focusAndHighlight('section-price')" class="absolute top-[62%] left-[48%] flex flex-col items-center group/hot focus:outline-none">
                                 <span class="relative flex h-5 w-5">
-                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-450 opacity-75"></span>
                                     <span class="relative inline-flex rounded-full h-5 w-5 bg-amber-500 border-2 border-zinc-950 flex items-center justify-center text-[9px] font-black text-black">$</span>
                                 </span>
                                 <span class="text-[9px] font-bold text-zinc-450 group-hover/hot:text-amber-500 bg-zinc-950/95 border border-zinc-800/80 px-1 rounded mt-1 transition-colors">ارز و قیمت</span>
@@ -275,7 +275,7 @@
                             <!-- Hotspot: Plate -->
                             <button onclick="focusAndHighlight('section-plate')" class="absolute top-[52%] left-[82%] flex flex-col items-center group/hot focus:outline-none">
                                 <span class="relative flex h-5 w-5">
-                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-450 opacity-75"></span>
                                     <span class="relative inline-flex rounded-full h-5 w-5 bg-amber-500 border-2 border-zinc-950 flex items-center justify-center text-[9px] font-black text-black">P</span>
                                 </span>
                                 <span class="text-[9px] font-bold text-zinc-450 group-hover/hot:text-amber-500 bg-zinc-950/95 border border-zinc-800/80 px-1 rounded mt-1 transition-colors">نوع پلاک</span>
@@ -635,6 +635,102 @@
                 badge: "سدان اقتصادی و مقاوم"
             },
             {
+                id: "benzc200",
+                name: "مرسدس بنز C200",
+                class: "sedan",
+                year: "2024",
+                cylinders: "4",
+                fuel: "gasoline",
+                cc: 2000,
+                price: 48000,
+                imgUrl: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800",
+                badge: "سدان لوکس آلمانی"
+            },
+            {
+                id: "lexusrx",
+                name: "لکسوس RX500h شاسی بلند",
+                class: "suv",
+                year: "2024",
+                cylinders: "4",
+                fuel: "hybrid",
+                cc: 2400,
+                price: 69000,
+                imgUrl: "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=800",
+                badge: "کراس‌اوور لوکس ژاپنی"
+            },
+            {
+                id: "audietron",
+                name: "آئودی e-tron برقی",
+                class: "ev",
+                year: "2025",
+                cylinders: "0",
+                fuel: "ev",
+                cc: 0,
+                price: 74000,
+                imgUrl: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=800",
+                badge: "SUV تمام برقی پریمیوم"
+            },
+            {
+                id: "porschetaycan",
+                name: "پورشه تایکان برقی",
+                class: "sports",
+                year: "2025",
+                cylinders: "0",
+                fuel: "ev",
+                cc: 0,
+                price: 92000,
+                imgUrl: "https://images.unsplash.com/photo-1614200187524-dc4b892acf16?auto=format&fit=crop&q=80&w=800",
+                badge: "اسپرت کوپه برقی لوکس"
+            },
+            {
+                id: "elantra",
+                name: "هیوندای النترا ۲۰۲۴",
+                class: "sedan",
+                year: "2024",
+                cylinders: "4",
+                fuel: "gasoline",
+                cc: 1600,
+                price: 21000,
+                imgUrl: "https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?auto=format&fit=crop&q=80&w=800",
+                badge: "سدان خانوادگی و بهینه"
+            },
+            {
+                id: "xtrail",
+                name: "نیسان ایکس تریل ۲۰۲۴",
+                class: "suv",
+                year: "2024",
+                cylinders: "4",
+                fuel: "gasoline",
+                cc: 2500,
+                price: 31000,
+                imgUrl: "https://images.unsplash.com/photo-1562141960-c15164573219?auto=format&fit=crop&q=80&w=800",
+                badge: "SUV دو دیفرانسیل ژاپنی"
+            },
+            {
+                id: "kiak5",
+                name: "کیا K5 جدید (اپتیما)",
+                class: "sedan",
+                year: "2024",
+                cylinders: "4",
+                fuel: "gasoline",
+                cc: 2000,
+                price: 26000,
+                imgUrl: "https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&q=80&w=800",
+                badge: "سدان اسپورت و تهاجمی"
+            },
+            {
+                id: "modely",
+                name: "تسلا مدل Y شاسی بلند",
+                class: "ev",
+                year: "2025",
+                cylinders: "0",
+                fuel: "ev",
+                cc: 0,
+                price: 44000,
+                imgUrl: "https://images.unsplash.com/photo-1571127236894-922da41d68f3?auto=format&fit=crop&q=80&w=800",
+                badge: "کراس‌اوور تمام الکتریکی"
+            },
+            {
                 id: "custom",
                 name: "⚠️ سایر خودروها (واردات سفارشی)",
                 class: "sedan",
@@ -712,10 +808,12 @@
         // Initialize App
         window.onload = function() {
             populateDatabaseDropdown();
+            // Critical Fix: Set View mode to display container block *before* Three.js init
+            // This ensures container clientWidth/clientHeight are read correctly instead of 0!
+            setViewMode('real'); 
             init3DEngine(); // Ignite Three.js canvas
             onDatabaseCarSelect(); // Set default selected Camry
             syncCustomPlateText();
-            setViewMode('technical'); // Default gorgeous 3D technical viewport view
         };
 
         // Populate database items into select dropdown
@@ -853,12 +951,6 @@
             loaderElement.style.display = 'none';
         }
 
-        // Updates text and details inside real preview even when manually edited
-        function updateRealCarDetailsOnManualChange() {
-            const nameElement = document.getElementById('realCarName');
-            nameElement.textContent = carModelInput.value || "خودرو نامشخص";
-        }
-
         // Switches view modes inside canvas area
         function setViewMode(mode) {
             viewMode = mode;
@@ -873,7 +965,7 @@
                 techContainer.classList.remove('hidden');
                 realContainer.classList.add('hidden');
                 // Trigger renderer size refresh
-                onWindowResize();
+                setTimeout(onWindowResize, 50);
             } else {
                 btnReal.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all bg-amber-500 text-black shadow";
                 btnTech.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all text-zinc-400 hover:text-white";
@@ -885,36 +977,40 @@
         // 3D Engine Initialization (Constructs fully responsive 3D WebGL car preview)
         function init3DEngine() {
             const canvas = document.getElementById('threeJsCanvas');
-            const container = document.getElementById('techViewContainer');
+            const container = document.getElementById('canvasParent'); // FIXED: Always read the fixed parent wrapper container!
             
+            const width = container.clientWidth || 600;
+            const height = container.clientHeight || 280;
+
             // Scene Setup
             scene = new THREE.Scene();
             scene.fog = new THREE.FogExp2(0x09090b, 0.015);
 
             // Camera Setup
-            camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 100);
-            camera.position.set(6, 4, 7);
+            camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 100);
+            camera.position.set(5.5, 2.5, 5.5);
+            camera.lookAt(0, 0.2, 0); // FIXED: Perfectly center camera focus on car chassis
 
             // Renderer Setup
             renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-            renderer.setSize(container.clientWidth, container.clientHeight);
-            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
             // Ambient & Point Lighting
             const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
             scene.add(ambientLight);
 
-            const amberPointLight = new THREE.PointLight(0xd97706, 2, 50);
+            const amberPointLight = new THREE.PointLight(0xd97706, 3, 50);
             amberPointLight.position.set(5, 5, 5);
             scene.add(amberPointLight);
 
-            const cyanPointLight = new THREE.PointLight(0x22d3ee, 1, 50);
+            const cyanPointLight = new THREE.PointLight(0x22d3ee, 2, 50);
             cyanPointLight.position.set(-5, 3, -5);
             scene.add(cyanPointLight);
 
             // Grid helper acting as futuristic platform
-            const gridHelper = new THREE.GridHelper(20, 20, 0xd97706, 0x27272a);
-            gridHelper.position.y = -1;
+            const gridHelper = new THREE.GridHelper(16, 18, 0xd97706, 0x27272a);
+            gridHelper.position.y = -0.7;
             scene.add(gridHelper);
 
             // Construct Car Group
@@ -934,12 +1030,12 @@
                 
                 // Slow ambient rotation if user is not actively dragging
                 if (!isDragging) {
-                    car3DGroup.rotation.y += 0.003;
+                    car3DGroup.rotation.y += 0.004;
                 }
 
                 // Animate spinning wheels to make it feel alive
                 wheels.forEach(wheel => {
-                    wheel.rotation.z -= 0.02;
+                    wheel.rotation.x -= 0.02;
                 });
 
                 renderer.render(scene, camera);
@@ -949,11 +1045,14 @@
 
         // Dynamic resize helper for responsive Three.js layout
         function onWindowResize() {
-            const container = document.getElementById('techViewContainer');
+            const container = document.getElementById('canvasParent'); // FIXED: Resize always synced with stable parent wrapper box
+            const width = container.clientWidth || 600;
+            const height = container.clientHeight || 280;
+
             if (camera && renderer) {
-                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.aspect = width / height;
                 camera.updateProjectionMatrix();
-                renderer.setSize(container.clientWidth, container.clientHeight);
+                renderer.setSize(width, height);
             }
         }
 
@@ -968,7 +1067,7 @@
                 if (!isDragging) return;
                 const deltaMove = { x: e.clientX - previousMousePosition.x, y: e.clientY - previousMousePosition.y };
                 car3DGroup.rotation.y += deltaMove.x * 0.01;
-                car3DGroup.rotation.x += deltaMove.y * 0.01;
+                car3DGroup.rotation.x += deltaMove.y * 0.005;
                 previousMousePosition = { x: e.clientX, y: e.clientY };
             });
 
@@ -986,7 +1085,7 @@
                 if (!isDragging || e.touches.length !== 1) return;
                 const deltaMove = { x: e.touches[0].clientX - previousMousePosition.x, y: e.touches[0].clientY - previousMousePosition.y };
                 car3DGroup.rotation.y += deltaMove.x * 0.01;
-                car3DGroup.rotation.x += deltaMove.y * 0.01;
+                car3DGroup.rotation.x += deltaMove.y * 0.005;
                 previousMousePosition = { x: e.touches[0].clientX, y: e.touches[0].clientY };
             });
 
@@ -1005,34 +1104,37 @@
             let chassisW = 3.2, chassisH = 0.5, chassisD = 1.6;
             let cabinW = 1.8, cabinH = 0.6, cabinD = 1.4;
             let cabinOffset = 0.1;
-            let wheelRad = 0.45, wheelThick = 0.25;
+            let wheelRad = 0.45, wheelThick = 0.22;
             let wheelY = -0.4;
             let neonColor = 0xd97706; // Amber neon theme
+            let hasSpoiler = false;
 
             if (carClass === 'suv') {
                 chassisW = 3.3; chassisH = 0.8; chassisD = 1.7;
                 cabinW = 2.2; cabinH = 0.8; cabinD = 1.5;
-                cabinOffset = 0;
-                wheelRad = 0.55; wheelThick = 0.35;
+                cabinOffset = -0.1;
+                wheelRad = 0.52; wheelThick = 0.28;
                 wheelY = -0.3;
             } else if (carClass === 'sports') {
                 chassisW = 3.5; chassisH = 0.35; chassisD = 1.8;
                 cabinW = 1.4; cabinH = 0.45; cabinD = 1.5;
-                cabinOffset = 0.4;
-                wheelRad = 0.42; wheelThick = 0.32;
+                cabinOffset = 0.3;
+                wheelRad = 0.42; wheelThick = 0.28;
                 wheelY = -0.35;
-                neonColor = 0xd97706;
+                hasSpoiler = true;
             } else if (carClass === 'ev') {
                 chassisW = 3.1; chassisH = 0.45; chassisD = 1.5;
                 cabinW = 1.7; cabinH = 0.55; cabinD = 1.35;
                 cabinOffset = 0.15;
-                wheelRad = 0.45; wheelThick = 0.25;
+                wheelRad = 0.45; wheelThick = 0.22;
                 wheelY = -0.4;
                 neonColor = 0x22d3ee; // Futuristic cyan EV glow
             }
 
-            // Material wireframe settings
+            // Material wireframe settings (Tron Legacy Style)
             const wireframeMat = new THREE.MeshBasicMaterial({ color: neonColor, wireframe: true, transparent: true, opacity: 0.85 });
+            const wheelMat = new THREE.MeshBasicMaterial({ color: neonColor, wireframe: true });
+            const glassMat = new THREE.MeshBasicMaterial({ color: (carClass === 'ev' ? 0x22d3ee : 0xffffff), wireframe: true, transparent: true, opacity: 0.3 });
 
             // 1. CHASSIS MESH (Procedural block)
             const chassisGeo = new THREE.BoxGeometry(chassisW, chassisH, chassisD);
@@ -1041,37 +1143,105 @@
 
             // 2. CABIN MESH
             const cabinGeo = new THREE.BoxGeometry(cabinW, cabinH, cabinD);
-            const cabinMesh = new THREE.Mesh(cabinGeo, wireframeMat);
+            const cabinMesh = new THREE.Mesh(cabinGeo, glassMat);
             cabinMesh.position.set(-cabinOffset, (chassisH/2) + (cabinH/2), 0);
             car3DGroup.add(cabinMesh);
 
-            // 3. WHEELS (4 rotating toruses acting as tires)
-            const wheelGeo = new THREE.TorusGeometry(wheelRad, wheelThick, 8, 24);
+            // 3. FRONT HOOD SLANT
+            const hoodGeo = new THREE.BoxGeometry(chassisW * 0.3, chassisH * 0.4, chassisD);
+            const hoodMesh = new THREE.Mesh(hoodGeo, wireframeMat);
+            hoodMesh.position.set(chassisW * 0.35, chassisH * 0.2, 0);
+            hoodMesh.rotation.z = -0.15;
+            car3DGroup.add(hoodMesh);
+
+            // 4. WHEELS (4 rotating toruses + detailed spokes)
+            const wheelGeo = new THREE.TorusGeometry(wheelRad, wheelThick, 12, 32);
+            const spokeGeo = new THREE.CylinderGeometry(0.04, 0.04, wheelRad * 2, 8);
+            
             const wheelPositions = [
-                { x: chassisW / 2.7, z: chassisD / 1.8 },
-                { x: chassisW / 2.7, z: -chassisD / 1.8 },
-                { x: -chassisW / 2.7, z: chassisD / 1.8 },
-                { x: -chassisW / 2.7, z: -chassisD / 1.8 }
+                { x: chassisW / 2.7, z: chassisD / 1.7 },
+                { x: chassisW / 2.7, z: -chassisD / 1.7 },
+                { x: -chassisW / 2.7, z: chassisD / 1.7 },
+                { x: -chassisW / 2.7, z: -chassisD / 1.7 }
             ];
 
             wheelPositions.forEach(pos => {
-                const wheelMesh = new THREE.Mesh(wheelGeo, wireframeMat);
-                wheelMesh.position.set(pos.x, wheelY, pos.z);
-                // Rotate wheel to stand upright on grid
-                wheelMesh.rotation.y = Math.PI / 2;
-                car3DGroup.add(wheelMesh);
-                wheels.push(wheelMesh);
+                const wheelAssembly = new THREE.Group();
+                wheelAssembly.position.set(pos.x, wheelY, pos.z);
+                
+                // Wheel Rim
+                const tire = new THREE.Mesh(wheelGeo, wheelMat);
+                wheelAssembly.add(tire);
+                
+                // Spokes / Alloy Spokes
+                const spoke1 = new THREE.Mesh(spokeGeo, wheelMat);
+                wheelAssembly.add(spoke1);
+                
+                const spoke2 = new THREE.Mesh(spokeGeo, wheelMat);
+                spoke2.rotation.z = Math.PI / 2;
+                wheelAssembly.add(spoke2);
+
+                const spoke3 = new THREE.Mesh(spokeGeo, wheelMat);
+                spoke3.rotation.z = Math.PI / 4;
+                wheelAssembly.add(spoke3);
+
+                const spoke4 = new THREE.Mesh(spokeGeo, wheelMat);
+                spoke4.rotation.z = -Math.PI / 4;
+                wheelAssembly.add(spoke4);
+
+                // Stand upright alignment
+                wheelAssembly.rotation.y = Math.PI / 2;
+                
+                car3DGroup.add(wheelAssembly);
+                wheels.push(wheelAssembly);
             });
 
-            // 4. FRONT LED HEADLIGHTS
-            const lightGeo = new THREE.SphereGeometry(0.08, 8, 8);
+            // 5. LED HEADLIGHTS (White/Cyan glow)
+            const headlightGeo = new THREE.BoxGeometry(0.1, 0.1, 0.3);
             const headLightMat = new THREE.MeshBasicMaterial({ color: (carClass === 'ev' ? 0x22d3ee : 0xffffff) });
-            const rightLight = new THREE.Mesh(lightGeo, headLightMat);
-            rightLight.position.set(chassisW / 2, 0, chassisD / 3.5);
-            const leftLight = new THREE.Mesh(lightGeo, headLightMat);
-            leftLight.position.set(chassisW / 2, 0, -chassisD / 3.5);
-            car3DGroup.add(rightLight);
-            car3DGroup.add(leftLight);
+            
+            const rightHeadlight = new THREE.Mesh(headlightGeo, headLightMat);
+            rightHeadlight.position.set(chassisW / 2, 0.1, chassisD / 3.5);
+            
+            const leftHeadlight = new THREE.Mesh(headlightGeo, headLightMat);
+            leftHeadlight.position.set(chassisW / 2, 0.1, -chassisD / 3.5);
+            
+            car3DGroup.add(rightHeadlight);
+            car3DGroup.add(leftHeadlight);
+
+            // 6. TAILLIGHTS (Glowing Red bars)
+            const taillightGeo = new THREE.BoxGeometry(0.08, 0.08, 0.5);
+            const tailLightMat = new THREE.MeshBasicMaterial({ color: 0xef4444 }); // Pure neon red
+            
+            const rightTaillight = new THREE.Mesh(taillightGeo, tailLightMat);
+            rightTaillight.position.set(-chassisW / 2, 0.1, chassisD / 4);
+            
+            const leftTaillight = new THREE.Mesh(taillightGeo, tailLightMat);
+            leftTaillight.position.set(-chassisW / 2, 0.1, -chassisD / 4);
+            
+            car3DGroup.add(rightTaillight);
+            car3DGroup.add(leftTaillight);
+
+            // 7. OPTIONAL: SPORT WING / SPOILER (Only for sportscar class)
+            if (hasSpoiler) {
+                const wingAssembly = new THREE.Group();
+                wingAssembly.position.set(-chassisW * 0.45, chassisH * 0.5, 0);
+
+                const wingGeo = new THREE.BoxGeometry(0.2, 0.05, chassisD * 0.9);
+                const wing = new THREE.Mesh(wingGeo, wireframeMat);
+                wingAssembly.add(wing);
+
+                const leftStrutGeo = new THREE.CylinderGeometry(0.03, 0.03, 0.4, 4);
+                const leftStrut = new THREE.Mesh(leftStrutGeo, wireframeMat);
+                leftStrut.position.set(0, -0.2, chassisD * 0.3);
+                wingAssembly.add(leftStrut);
+
+                const rightStrut = leftStrut.clone();
+                rightStrut.position.set(0, -0.2, -chassisD * 0.3);
+                wingAssembly.add(rightStrut);
+
+                car3DGroup.add(wingAssembly);
+            }
         }
 
         // Updates 3D dimensions when class or model switches
@@ -1106,7 +1276,7 @@
             }
         }
 
-        // Dynamic Car Class Changer
+        // Dynamic Car Class Changer with Automatic Perfect Database Matching
         function setCarClass(className, triggerStateSync = true) {
             currentCarClass = className;
             
@@ -1120,7 +1290,15 @@
             }
 
             if (triggerStateSync) {
-                onManualInputChange();
+                // EXTREME UX FIX: Auto-select a valid premium vehicle of the chosen class
+                const matchingCar = carDatabase.find(c => c.class === className && c.id !== 'custom');
+                if (matchingCar) {
+                    carDbSelect.value = matchingCar.id;
+                    onDatabaseCarSelect();
+                } else {
+                    carDbSelect.value = 'custom';
+                    onDatabaseCarSelect();
+                }
             }
         }
 
@@ -1404,7 +1582,7 @@
                 mIconContainer.className = "w-12 h-12 rounded-full mx-auto flex items-center justify-center bg-emerald-500/10 text-emerald-500";
                 mIconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>`;
             } else {
-                mIconContainer.className = "w-12 h-12 rounded-full mx-auto flex items-center justify-center bg-red-500/10 text-red-500";
+                mIconContainer.className = "w-12 h-12 rounded-full mx-auto flex items-center justify-center bg-red-500/10 text-red-550";
                 mIconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>`;
             }
 
@@ -1414,6 +1592,7 @@
             }, 10);
         }
 
+        // Close custom modal window
         function closeModal() {
             const modal = document.getElementById('customModal');
             modal.classList.remove('opacity-100');
