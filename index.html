@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سامانه پیشرفته شبیه‌ساز گمرک و واردات خودرو عدنان</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font for Premium Persian Typography -->
+    <link href="https://cdn.jsdelivr.net/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        /* Glassmorphism utility classes */
+        .glass-panel {
+            background: rgba(15, 15, 20, 0.75);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Glowing neon effect */
+        .neon-glow-amber {
+            box-shadow: 0 0 25px rgba(217, 119, 6, 0.2);
+        }
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d97706;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-zinc-950 via-zinc-900 to-black text-zinc-100 min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black">
+
+    <!-- Header Section -->
+    <header class="border-b border-zinc-800/60 bg-zinc-950/80 backdrop-blur-md sticky top-0 z-50 px-4 py-3.5 md:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center shadow-lg shadow-amber-600/20">
+                    <span class="text-black font-black text-2xl tracking-wider">A</span>
+                </div>
+                <div>
+                    <h1 class="text-xl font-black text-amber-500 tracking-wide uppercase">هلدینگ تجاری عدنان</h1>
+                    <p class="text-[11px] text-zinc-400">سامانه محاسبات تخصصی، شبیه‌ساز زنده قوانین پلاک و گمرک ایران</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2 bg-zinc-900/90 border border-zinc-800 px-3 py-1.5 rounded-xl text-xs">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-zinc-300">بروزرسانی زنده تعرفه‌ها: ۱۴۰۵</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="max-w-7xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left Side: Inputs Form (5 Cols) -->
+            <section class="lg:col-span-5 glass-panel p-6 rounded-3xl shadow-2xl space-y-6 border border-zinc-800/50">
+                <div class="border-b border-zinc-800 pb-4">
+                    <h2 class="text-lg font-bold text-amber-500 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0L8.07 4.71c-.3.04-.6.1-.9.18L5.78 3.48c-1.38-.86-3.12.5-2.7 2.11L3.9 7.16c-.2.23-.37.49-.51.77L1.8 7.51c-1.42-.58-2.73 1.1-1.92 2.36l1.37 1.83c-.04.14-.07.28-.09.43l-1.93.38c-1.56.31-1.56 2.53 0 2.84l1.93.38c.02.15.05.29.09.43l-1.37 1.83c-.81 1.26.5 2.94 1.92 2.36l1.59-.42c.14.28.31.54.51.77l-.82 1.57c-.42 1.61 1.32 2.97 2.7 2.11l1.39-1.41c.3.08.6.14.9.18l.44 1.54c.38 1.56 2.6 1.56 2.98 0l.44-1.54c.3-.04.6-.1.9-.18l1.39 1.41c1.38.86 3.12-.5 2.7-2.11l-.82-1.57c.2-.23.37-.49.51-.77l1.59.42c1.42.58 2.73-1.1 1.92-2.36l-1.37-1.83c.04-.14.07-.28.09-.43l1.93.38c1.56-.31 1.56-2.53 0-2.84l-1.93-.38c-.02-.15-.05-.29-.09-.43l1.37-1.83c.81-1.26-.5-2.94-1.92-2.36l-1.59.42c-.14-.28-.31-.54-.51-.77l.82-1.57c.42-1.61-1.32-2.97-2.7-2.11l-1.39 1.41c-.3-.08-.6-.14-.9-.18l-.44-1.54zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                        </svg>
+                        تنظیمات ترخیص و خودرو
+                    </h2>
+                    <p class="text-xs text-zinc-400 mt-1">مشخصات خودرو را به صورت دستی تغییر دهید یا روی نقاط تپنده‌ی تصویر کلیک کنید.</p>
+                </div>
+
+                <div class="space-y-5">
+                    
+                    <!-- Connected Smart Database Selector -->
+                    <div>
+                        <label class="block text-xs text-amber-500 font-bold mb-1.5 flex items-center gap-1">
+                            <span class="flex h-2 w-2 relative">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-450 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                            </span>
+                            انتخاب خودرو از دیتابیس هلدینگ عدنان
+                        </label>
+                        <select id="carDbSelect" onchange="onDatabaseCarSelect()" class="w-full bg-zinc-950/80 border border-zinc-800 focus:border-amber-500 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                            <!-- Populated dynamically by JavaScript -->
+                        </select>
+                    </div>
+
+                    <!-- Brand & Model (Shows/Hides dynamically) -->
+                    <div id="customModelWrapper" class="hidden">
+                        <label class="block text-xs text-zinc-300 font-medium mb-1.5">برند و مدل خودرو سفارشی</label>
+                        <input type="text" id="carModel" value="تویوتا کمری هیبرید" class="w-full bg-zinc-950/80 border border-zinc-800 focus:border-amber-500 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none transition-colors" placeholder="مثلاً: تویوتا کمری">
+                    </div>
+
+                    <!-- Car Body Class (Visual Selector) -->
+                    <div id="section-class">
+                        <label class="block text-xs text-zinc-300 font-medium mb-2.5">کلاس بدنه خودرو</label>
+                        <div class="grid grid-cols-4 gap-2">
+                            <button type="button" onclick="setCarClass('sedan')" id="btn-class-sedan" class="car-class-btn p-2 rounded-xl border text-center transition-all bg-amber-500/10 border-amber-500/50 text-amber-500">
+                                <svg class="w-8 h-6 mx-auto stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 15h18M4 15V11l3-3h8l3 3v4M6 11h12M7.5 15a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM16.5 15a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" stroke-linecap="round"/></svg>
+                                <span class="text-[9px] block mt-1 font-bold">سدان</span>
+                            </button>
+                            <button type="button" onclick="setCarClass('suv')" id="btn-class-suv" class="car-class-btn p-2 rounded-xl border text-center transition-all border-zinc-800 bg-zinc-950/50 text-zinc-400 hover:border-zinc-700">
+                                <svg class="w-8 h-6 mx-auto stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M2 14v-3l2-2h10l2 2h4v3H2zM4.5 14a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM15.5 14a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" stroke-linecap="round"/></svg>
+                                <span class="text-[9px] block mt-1 font-bold">شاسی‌بلند</span>
+                            </button>
+                            <button type="button" onclick="setCarClass('sports')" id="btn-class-sports" class="car-class-btn p-2 rounded-xl border text-center transition-all border-zinc-800 bg-zinc-950/50 text-zinc-400 hover:border-zinc-700">
+                                <svg class="w-8 h-6 mx-auto stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M2 14h20M3 14V11l4-4h6l5 4h2v3M5.5 14a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM14.5 14a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" stroke-linecap="round"/></svg>
+                                <span class="text-[9px] block mt-1 font-bold">اسپرت</span>
+                            </button>
+                            <button type="button" onclick="setCarClass('ev')" id="btn-class-ev" class="car-class-btn p-2 rounded-xl border text-center transition-all border-zinc-800 bg-zinc-950/50 text-zinc-400 hover:border-zinc-700">
+                                <svg class="w-8 h-6 mx-auto stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 14h18M5 14V10l3-3h8v7M7.5 14a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM16.5 14a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" stroke-linecap="round"/></svg>
+                                <span class="text-[9px] block mt-1 font-bold">هاچ‌بک/برقی</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Year of Manufacture & Cylinder count -->
+                    <div class="grid grid-cols-2 gap-4" id="section-year">
+                        <div>
+                            <label class="block text-xs text-zinc-300 font-medium mb-1.5">سال ساخت</label>
+                            <select id="carYear" onchange="onManualInputChange()" class="w-full bg-zinc-950/80 border border-zinc-800 focus:border-amber-500 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                <option value="2026">2026 (صفر کیلومتر)</option>
+                                <option value="2025" selected>2025 (صفر کیلومتر)</option>
+                                <option value="2024">2024 (کارکرده زیر ۵ سال)</option>
+                                <option value="2023">2023 (کارکرده زیر ۵ سال)</option>
+                                <option value="2022">2022 (کارکرده زیر ۵ سال)</option>
+                                <option value="2021">2021 (کارکرده زیر ۵ سال)</option>
+                                <option value="2020">2020 (کارکرده زیر ۵ سال)</option>
+                                <option value="2019">2019 (نیازمند مجوز ویژه)</option>
+                                <option value="1990">1990 یا قدیمی‌تر (کلاسیک)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-zinc-300 font-medium mb-1.5">تعداد سیلندر</label>
+                            <select id="carCylinders" onchange="onManualInputChange()" class="w-full bg-zinc-950/80 border border-zinc-800 focus:border-amber-500 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                <option value="0">بدون سیلندر (برقی)</option>
+                                <option value="3">۳ سیلندر</option>
+                                <option value="4" selected>۴ سیلندر</option>
+                                <option value="6">۶ سیلندر</option>
+                                <option value="8">۸ سیلندر (نیاز به مجوز خاص)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Fuel Type & Engine CC -->
+                    <div class="grid grid-cols-2 gap-4" id="section-engine">
+                        <div>
+                            <label class="block text-xs text-zinc-300 font-medium mb-1.5">نوع موتور (سوخت)</label>
+                            <select id="carFuel" onchange="onManualInputChange()" class="w-full bg-zinc-950/80 border border-zinc-800 focus:border-amber-500 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                                <option value="gasoline">بنزینی (عادی)</option>
+                                <option value="hybrid" selected>هیبریدی (تخفیف گمرکی)</option>
+                                <option value="ev">تمام برقی (تعرفه بسیار کم)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-zinc-300 font-medium mb-1.5">حجم موتور (سی‌سی)</label>
+                            <input type="number" id="carCC" oninput="onManualInputChange()" value="2000" min="0" max="6000" class="w-full bg-zinc-950/80 border border-zinc-800 focus:border-amber-500 rounded-xl px-4 py-2 text-sm text-white focus:outline-none transition-colors">
+                        </div>
+                    </div>
+
+                    <!-- FOB Price & Currency Rate (Editable!) -->
+                    <div id="section-price" class="space-y-4 bg-zinc-950/40 p-4 rounded-2xl border border-zinc-800/60">
+                        <div>
+                            <div class="flex justify-between items-center mb-1.5">
+                                <label class="text-xs text-zinc-300 font-medium">قیمت پایه خودرو (FOB - دلار)</label>
+                                <span id="priceLabel" class="text-xs font-bold text-amber-500">$25,000</span>
+                            </div>
+                            <input type="range" id="carPrice" oninput="onManualInputChange()" min="5000" max="150000" step="1000" value="25000" class="w-full h-1.5 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-zinc-400 font-medium mb-1.5">نرخ ارز محاسباتی دلار (تومان) - قابل ویرایش</label>
+                            <input type="number" id="dollarRateInput" oninput="onManualInputChange()" value="60000" class="w-full bg-zinc-900 border border-zinc-800 focus:border-amber-500 rounded-xl px-4 py-2 text-xs text-white focus:outline-none transition-colors text-left" placeholder="60000">
+                        </div>
+                    </div>
+
+                    <!-- Special Quotas / Facilities -->
+                    <div>
+                        <label class="block text-xs text-zinc-300 font-medium mb-1.5">نوع سهمیه و تسهیلات وارداتی</label>
+                        <select id="carQuota" onchange="onManualInputChange()" class="w-full bg-zinc-950/80 border border-zinc-800 focus:border-amber-500 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none transition-colors">
+                            <option value="normal" selected>سهمیه عادی (نیاز به گواهی اسقاط خودرو)</option>
+                            <option value="veteran">سهمیه ایثارگران و جانبازان (تخفیف گمرکی ۸۰٪)</option>
+                            <option value="freezone">واردات ویژه مناطق آزاد (معاف از مالیات بر ارزش افزوده)</option>
+                        </select>
+                    </div>
+
+                    <!-- Import & License Plate Type -->
+                    <div id="section-plate">
+                        <label class="block text-xs text-zinc-300 font-medium mb-2.5">نوع پلاک درخواستی در ایران</label>
+                        <div class="grid grid-cols-2 gap-2" id="plateTypeGrid">
+                            <button type="button" onclick="setPlateType('melli')" id="btn-melli" class="plate-btn py-2.5 px-3 rounded-xl border text-xs font-bold text-center transition-all bg-amber-500/10 border-amber-500/50 text-amber-500 shadow-md">
+                                پلاک ملی (تردد سراسری)
+                            </button>
+                            <button type="button" onclick="setPlateType('gozar')" id="btn-gozar" class="plate-btn py-2.5 px-3 rounded-xl border text-xs font-bold text-zinc-400 border-zinc-800 bg-zinc-950/50 hover:border-zinc-700 text-center transition-all">
+                                گذر موقت (۳ تا ۶ ماه)
+                            </button>
+                            <button type="button" onclick="setPlateType('azad')" id="btn-azad" class="plate-btn py-2.5 px-3 rounded-xl border text-xs font-bold text-zinc-400 border-zinc-800 bg-zinc-950/50 hover:border-zinc-700 text-center transition-all">
+                                ویژه مناطق آزاد تجاری
+                            </button>
+                            <button type="button" onclick="setPlateType('classic')" id="btn-classic" class="plate-btn py-2.5 px-3 rounded-xl border text-xs font-bold text-zinc-400 border-zinc-800 bg-zinc-950/50 hover:border-zinc-700 text-center transition-all">
+                                کلاسیک / تاریخی
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Side: Live Simulators, Interactive SVG & Detailed Invoice (7 Cols) -->
+            <section class="lg:col-span-7 flex flex-col gap-6">
+                
+                <!-- Interactive Car Canvas & Hotspot Selector -->
+                <div class="bg-zinc-900/60 border border-zinc-800/80 p-5 rounded-3xl shadow-xl flex flex-col gap-3 relative overflow-hidden">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-bold text-zinc-400">نمای شبیه‌ساز زنده خودرو</span>
+                        
+                        <!-- Toggle View Mode Switcher -->
+                        <div class="flex items-center gap-1 bg-zinc-950 p-1 rounded-xl border border-zinc-800">
+                            <button type="button" onclick="setViewMode('technical')" id="btn-view-tech" class="px-3 py-1 text-[10px] font-bold rounded-lg transition-all text-zinc-400 hover:text-white">طراحی فنی</button>
+                            <button type="button" onclick="setViewMode('real')" id="btn-view-real" class="px-3 py-1 text-[10px] font-bold rounded-lg transition-all bg-amber-500 text-black">تصویر واقعی</button>
+                        </div>
+                    </div>
+
+                    <!-- Elegant Interactive Container holding both layouts -->
+                    <div class="relative w-full aspect-[2/0.95] bg-zinc-950/90 rounded-2xl border border-zinc-800/80 flex items-center justify-center overflow-hidden">
+                        <!-- Tech Grid background -->
+                        <div class="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:16px_16px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-25"></div>
+                        <div class="absolute w-64 h-16 bg-amber-500/5 rounded-full blur-3xl bottom-6"></div>
+
+                        <!-- 1. TECHNICAL NEON VIEW CONTAINER -->
+                        <div id="techViewContainer" class="hidden w-full h-full flex items-center justify-center p-4">
+                            <!-- Main Interactive SVG with distinct class layers -->
+                            <svg id="interactiveCarSvg" class="w-full max-w-[440px] h-auto text-zinc-500" viewBox="0 0 500 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation="5" result="blur" />
+                                        <feMerge>
+                                            <feMergeNode in="blur" />
+                                            <feMergeNode in="SourceGraphic" />
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+
+                                <!-- Sedan Group -->
+                                <g id="car-g-sedan" class="transition-opacity duration-300">
+                                    <path d="M40 155c0-5 15-20 40-25l75-12 45-48h130l35 43 45 15 50 12c15 5 25 10 25 20v20H40v-25z" class="stroke-amber-500" stroke-width="2" filter="url(#neon-glow)" fill="none"/>
+                                    <path d="M155 118l30-38h110l25 38" class="stroke-amber-500/40" stroke-width="1.5" fill="none"/>
+                                    <circle cx="115" cy="175" r="24" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
+                                    <circle cx="115" cy="175" r="8" class="fill-amber-500"/>
+                                    <circle cx="375" cy="175" r="24" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
+                                    <circle cx="375" cy="175" r="8" class="fill-amber-500"/>
+                                </g>
+
+                                <!-- SUV Group (Hidden by default) -->
+                                <g id="car-g-suv" class="hidden transition-opacity duration-300">
+                                    <path d="M40 155c0-10 10-25 35-28l90-12 35-38h160l25 32h50c15 0 25 15 25 25v26H40v-15z" class="stroke-amber-500" stroke-width="2" filter="url(#neon-glow)" fill="none"/>
+                                    <path d="M200 70h100" class="stroke-amber-500" stroke-width="2" fill="none"/>
+                                    <path d="M210 70v7M250 70v7M290 70v7" class="stroke-amber-500/60" stroke-width="1.5" fill="none"/>
+                                    <path d="M165 115l25-32h140l20 32" class="stroke-amber-500/40" stroke-width="1.5" fill="none"/>
+                                    <circle cx="115" cy="175" r="28" class="stroke-amber-500/80 fill-zinc-950" stroke-width="2"/>
+                                    <circle cx="115" cy="175" r="10" class="fill-amber-500"/>
+                                    <circle cx="375" cy="175" r="28" class="stroke-amber-500/80 fill-zinc-950" stroke-width="2"/>
+                                    <circle cx="375" cy="175" r="10" class="fill-amber-500"/>
+                                </g>
+
+                                <!-- Sports Group (Hidden by default) -->
+                                <g id="car-g-sports" class="hidden transition-opacity duration-300">
+                                    <path d="M30 160c0-5 10-15 30-18l110-15 55-48h90l65 53h75c10 0 15 10 15 15v13H30v-10z" class="stroke-amber-500" stroke-width="2" filter="url(#neon-glow)" fill="none"/>
+                                    <path d="M435 125l25-10v10" class="stroke-amber-500" stroke-width="2.5" fill="none"/>
+                                    <path d="M170 127l45-43h75l45 43" class="stroke-amber-500/40" stroke-width="1.5" fill="none"/>
+                                    <circle cx="115" cy="175" r="22" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
+                                    <circle cx="115" cy="175" r="8" class="fill-amber-500"/>
+                                    <circle cx="375" cy="175" r="22" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
+                                    <circle cx="375" cy="175" r="8" class="fill-amber-500"/>
+                                </g>
+
+                                <!-- EV Group (Hidden by default) -->
+                                <g id="car-g-ev" class="hidden transition-opacity duration-300">
+                                    <path d="M45 155c0-10 15-25 35-27l85-5 35-37h120l50 35h55c10 0 15 15 15 25v14H45z" class="stroke-amber-500" stroke-width="2" filter="url(#neon-glow)" fill="none"/>
+                                    <path d="M165 123l25-32h95l35 32" class="stroke-amber-500/40" stroke-width="1.5" fill="none"/>
+                                    <path d="M45 140h35" class="stroke-cyan-400" stroke-width="1.5"/>
+                                    <path d="M440 140h15" class="stroke-red-500" stroke-width="1.5"/>
+                                    <circle cx="115" cy="175" r="24" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
+                                    <circle cx="115" cy="175" r="14" class="fill-zinc-900 stroke-amber-500/30" stroke-width="1"/>
+                                    <circle cx="115" cy="175" r="4" class="fill-amber-500"/>
+                                    <circle cx="375" cy="175" r="24" class="stroke-amber-500/60 fill-zinc-950" stroke-width="2"/>
+                                    <circle cx="375" cy="175" r="14" class="fill-zinc-900 stroke-amber-500/30" stroke-width="1"/>
+                                    <circle cx="375" cy="175" r="4" class="fill-amber-500"/>
+                                </g>
+
+                                <line x1="10" y1="206" x2="490" y2="206" class="stroke-zinc-800" stroke-width="2"/>
+                            </svg>
+
+                            <!-- Pulsing HTML Hotspots (Completely reliable click targets over SVG) -->
+                            <!-- Hotspot: Engine -->
+                            <button onclick="focusAndHighlight('section-engine')" class="absolute top-[48%] left-[16%] flex flex-col items-center group/hot focus:outline-none">
+                                <span class="relative flex h-5 w-5">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-5 w-5 bg-amber-500 border-2 border-zinc-950 flex items-center justify-center text-[9px] font-black text-black">M</span>
+                                </span>
+                                <span class="text-[9px] font-bold text-zinc-450 group-hover/hot:text-amber-500 bg-zinc-950/95 border border-zinc-800/80 px-1 rounded mt-1 transition-colors">موتور</span>
+                            </button>
+
+                            <!-- Hotspot: Year -->
+                            <button onclick="focusAndHighlight('section-year')" class="absolute top-[28%] left-[48%] flex flex-col items-center group/hot focus:outline-none">
+                                <span class="relative flex h-5 w-5">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-5 w-5 bg-amber-500 border-2 border-zinc-950 flex items-center justify-center text-[9px] font-black text-black">Y</span>
+                                </span>
+                                <span class="text-[9px] font-bold text-zinc-450 group-hover/hot:text-amber-500 bg-zinc-950/95 border border-zinc-800/80 px-1 rounded mt-1 transition-colors">سال ساخت</span>
+                            </button>
+
+                            <!-- Hotspot: Price -->
+                            <button onclick="focusAndHighlight('section-price')" class="absolute top-[62%] left-[48%] flex flex-col items-center group/hot focus:outline-none">
+                                <span class="relative flex h-5 w-5">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-5 w-5 bg-amber-500 border-2 border-zinc-950 flex items-center justify-center text-[9px] font-black text-black">$</span>
+                                </span>
+                                <span class="text-[9px] font-bold text-zinc-450 group-hover/hot:text-amber-500 bg-zinc-950/95 border border-zinc-800/80 px-1 rounded mt-1 transition-colors">ارز و قیمت</span>
+                            </button>
+
+                            <!-- Hotspot: Plate -->
+                            <button onclick="focusAndHighlight('section-plate')" class="absolute top-[52%] left-[82%] flex flex-col items-center group/hot focus:outline-none">
+                                <span class="relative flex h-5 w-5">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-5 w-5 bg-amber-500 border-2 border-zinc-950 flex items-center justify-center text-[9px] font-black text-black">P</span>
+                                </span>
+                                <span class="text-[9px] font-bold text-zinc-450 group-hover/hot:text-amber-500 bg-zinc-950/95 border border-zinc-800/80 px-1 rounded mt-1 transition-colors">نوع پلاک</span>
+                            </button>
+                        </div>
+
+                        <!-- 2. REAL CAR GALLERY CONTAINER -->
+                        <div id="realViewContainer" class="w-full h-full relative group">
+                            <!-- Image loader placeholder -->
+                            <div id="imageLoader" class="absolute inset-0 bg-zinc-950 flex items-center justify-center z-10 transition-opacity duration-300">
+                                <div class="w-8 h-8 border-4 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
+                            </div>
+                            
+                            <!-- Real Car Image render -->
+                            <img id="realCarImage" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="" alt="Real Car" onerror="handleImageLoadError()">
+                            
+                            <!-- Aesthetic Gradient Overlays -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent pointer-events-none"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/50 to-transparent pointer-events-none"></div>
+
+                            <!-- Real-time Car Label & Badge overlays -->
+                            <div class="absolute bottom-4 right-4 text-right">
+                                <span id="realCarBadge" class="text-[10px] uppercase font-bold text-zinc-950 bg-amber-500 px-2 py-0.5 rounded-md border border-amber-500/50 block w-max mb-1.5 shadow">SEDAN</span>
+                                <h3 id="realCarName" class="text-lg font-black text-white drop-shadow">تویوتا کمری هیبرید</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom License Plate Customizer Panel -->
+                <div class="bg-zinc-900/60 border border-zinc-800/80 p-6 rounded-3xl shadow-xl space-y-4">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+                        <span class="text-xs font-bold text-zinc-400">شبیه‌ساز و پلاک‌نویس زنده خودرو</span>
+                        <div class="flex items-center gap-2">
+                            <!-- Input boxes directly updating the plate numbers -->
+                            <input type="text" id="plateNumL" value="۱۲" class="w-10 bg-zinc-950 border border-zinc-800 rounded px-1.5 py-0.5 text-xs text-center font-bold text-amber-500">
+                            <input type="text" id="plateAlpha" value="ب" class="w-8 bg-zinc-950 border border-zinc-800 rounded px-1.5 py-0.5 text-xs text-center font-bold text-amber-500">
+                            <input type="text" id="plateNumR" value="۳۴۵" class="w-12 bg-zinc-950 border border-zinc-800 rounded px-1.5 py-0.5 text-xs text-center font-bold text-amber-500">
+                            <span class="text-zinc-600">|</span>
+                            <span class="text-[10px] text-zinc-400">ایران:</span>
+                            <input type="text" id="plateProvince" value="۳۳" class="w-8 bg-zinc-950 border border-zinc-800 rounded px-1.5 py-0.5 text-xs text-center font-bold text-amber-500">
+                        </div>
+                    </div>
+
+                    <!-- Rendered Plate Body Container -->
+                    <div class="flex items-center justify-center py-2">
+                        <div id="licensePlate" class="w-full max-w-[380px] h-[85px] bg-white border-2 border-black rounded-lg flex items-center relative select-none shadow-2xl ring-4 ring-amber-500/10">
+                            
+                            <!-- National (Melli) Plate Layout -->
+                            <div id="plate-layout-melli" class="w-full h-full flex items-center justify-between text-black font-bold">
+                                <div class="w-[35px] h-full bg-blue-800 rounded-r-[6px] flex flex-col items-center justify-between py-1 text-white">
+                                    <div class="flex flex-col items-center gap-0.5 mt-1">
+                                        <div class="w-6 h-1 bg-green-600 rounded-sm"></div>
+                                        <div class="w-6 h-1 bg-white rounded-sm flex items-center justify-center"><div class="w-1.5 h-1.5 bg-red-600 rounded-full"></div></div>
+                                        <div class="w-6 h-1 bg-red-600 rounded-sm"></div>
+                                    </div>
+                                    <div class="text-[7px] text-center font-sans tracking-tight leading-none mb-1">I.R.<br>IRAN</div>
+                                </div>
+                                <div class="flex-grow h-full flex items-center justify-center gap-4 text-3xl font-serif tracking-widest pl-2">
+                                    <span id="txtPlateL" class="font-extrabold text-4xl">۱۲</span>
+                                    <span id="txtPlateAlpha" class="text-2xl font-sans text-blue-900">ب</span>
+                                    <span id="txtPlateR" class="font-extrabold text-4xl">۳۴۵</span>
+                                </div>
+                                <div class="w-[50px] h-full border-r border-black flex flex-col items-center justify-center relative bg-white rounded-l-[6px]">
+                                    <span class="text-[9px] text-zinc-500 font-sans leading-none absolute top-1">ایران</span>
+                                    <span id="txtPlateProv" class="text-2xl font-bold mt-2">۳۳</span>
+                                </div>
+                            </div>
+
+                            <!-- Temporary (Gozar) Plate Layout -->
+                            <div id="plate-layout-gozar" class="hidden w-full h-full flex items-center justify-between text-black font-bold">
+                                <div class="w-[35px] h-full bg-blue-800 rounded-r-[6px] flex flex-col items-center justify-between py-1 text-white">
+                                    <div class="flex flex-col items-center gap-0.5 mt-1">
+                                        <div class="w-6 h-1 bg-green-600 rounded-sm"></div>
+                                        <div class="w-6 h-1 bg-white rounded-sm flex items-center justify-center"><div class="w-1.5 h-1.5 bg-red-600 rounded-full"></div></div>
+                                        <div class="w-6 h-1 bg-red-600 rounded-sm"></div>
+                                    </div>
+                                    <div class="text-[7px] text-center font-sans tracking-tight leading-none mb-1">I.R.<br>IRAN</div>
+                                </div>
+                                <div class="flex-grow h-full flex items-center justify-center gap-3 text-3xl font-serif pl-2">
+                                    <span id="txtPlateL-g" class="font-extrabold text-4xl">۱۲</span>
+                                    <span class="text-xl px-2 py-0.5 border border-red-500 rounded bg-red-50 text-red-600 font-sans">گذر</span>
+                                    <span id="txtPlateR-g" class="font-extrabold text-4xl">۳۴۵</span>
+                                </div>
+                                <div class="w-[60px] h-full bg-red-600 border-r border-black flex flex-col items-center justify-center text-white rounded-l-[6px]">
+                                    <span class="text-[8px] opacity-80 mt-1">EXPIRY</span>
+                                    <span class="text-xs font-black tracking-wide leading-none my-1">05/08</span>
+                                    <span class="text-[8px] border-t border-white/30 pt-0.5">۱۴۰۵</span>
+                                </div>
+                            </div>
+
+                            <!-- Free Zone (Azad) Plate Layout -->
+                            <div id="plate-layout-azad" class="hidden w-full h-full flex items-center justify-between text-black font-bold">
+                                <div class="w-[30px] h-full bg-blue-800 rounded-r-[6px] flex flex-col items-center justify-between py-1 text-white">
+                                    <div class="flex flex-col items-center gap-0.5 mt-1">
+                                        <div class="w-5 h-1 bg-green-600 rounded-sm"></div>
+                                        <div class="w-5 h-1 bg-white rounded-sm flex items-center justify-center"><div class="w-1.5 h-1.5 bg-red-600 rounded-full"></div></div>
+                                        <div class="w-5 h-1 bg-red-600 rounded-sm"></div>
+                                    </div>
+                                    <div class="text-[6px] text-center font-sans tracking-tight leading-none mb-1">I.R.<br>IRAN</div>
+                                </div>
+                                <div class="flex-grow h-full flex flex-col justify-center items-center border-r border-zinc-200 py-1">
+                                    <span class="text-[9px] text-zinc-400 font-sans leading-none">FREE ZONE</span>
+                                    <span id="txtPlateL-a" class="text-2xl font-sans tracking-widest font-black text-blue-900">۱۲۳۴۵</span>
+                                </div>
+                                <div class="w-[85px] h-full bg-emerald-600 border-r border-black flex flex-col items-center justify-center text-white rounded-l-[6px]">
+                                    <span class="text-xs font-black">منطقه آزاد</span>
+                                    <span class="text-[9px] font-medium tracking-wide">انزلی - ANZALI</span>
+                                    <span id="txtPlateR-a" class="text-sm font-bold mt-0.5">۱۲۳۴۵</span>
+                                </div>
+                            </div>
+
+                            <!-- Classic/Historic Plate Layout -->
+                            <div id="plate-layout-classic" class="hidden w-full h-full flex items-center justify-between text-black font-bold">
+                                <div class="w-[45px] h-full bg-amber-900 rounded-r-[6px] flex flex-col items-center justify-center py-1 border-l border-amber-600">
+                                    <span class="text-[8px] text-amber-300">تاریخی</span>
+                                    <span class="text-[7px] text-zinc-400 mt-1">HISTORIC</span>
+                                </div>
+                                <div class="flex-grow h-full flex items-center justify-center gap-3 text-2xl font-serif text-amber-100">
+                                    <span class="text-xs px-2.5 py-1 rounded bg-amber-900/80 border border-amber-700/60">خودرو عتیقه کلاسیک</span>
+                                    <span id="txtPlateL-c" class="font-extrabold text-3xl">۵۳۴</span>
+                                </div>
+                                <div class="w-[50px] h-full border-r border-amber-600 flex flex-col items-center justify-center rounded-l-[6px]">
+                                    <span class="text-[9px] text-amber-400 leading-none">ایران</span>
+                                    <span class="text-xl font-bold mt-1 text-white">ک</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Permit & Vacation Circular Progress Bar -->
+                    <div class="bg-zinc-950/60 p-4 rounded-2xl border border-zinc-855 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="space-y-1 text-right">
+                            <span id="permitTitle" class="text-xs font-bold text-zinc-300">میزان مرخصی و تردد سالانه</span>
+                            <p id="permitDesc" class="text-[10px] text-zinc-500 leading-relaxed"></p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <!-- Graphical Progress Bar -->
+                            <div class="relative w-14 h-14 flex items-center justify-center">
+                                <svg class="w-full h-full -rotate-90">
+                                    <circle cx="28" cy="28" r="24" class="stroke-zinc-800 fill-none" stroke-width="4" />
+                                    <circle id="permitCircle" cx="28" cy="28" r="24" class="stroke-amber-500 fill-none" stroke-width="4" stroke-dasharray="150" stroke-dashoffset="150" />
+                                </svg>
+                                <span id="permitDays" class="absolute text-xs font-black text-white">۳۶۵</span>
+                            </div>
+                            <span class="text-[10px] text-zinc-400">روز تردد قانونی</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comprehensive Tariff & Detailed Cost Invoice -->
+                <div class="bg-zinc-900/60 border border-zinc-800/80 p-6 rounded-3xl shadow-xl space-y-4">
+                    <h3 class="text-sm font-bold text-amber-500">جزئیات کامل هزینه‌های ترخیص گمرکی و حمل (پیش‌فاکتور)</h3>
+                    
+                    <!-- Cost Breakdown Table (Very complete!) -->
+                    <div class="overflow-hidden border border-zinc-800/80 rounded-2xl bg-zinc-950/40 text-xs">
+                        <table class="w-full border-collapse text-right">
+                            <thead>
+                                <tr class="bg-zinc-900 border-b border-zinc-800 text-zinc-400 font-bold">
+                                    <th class="p-3">شرح هزینه‌های واردات</th>
+                                    <th class="p-3 text-left">برآورد هزینه (تومان / دلار)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-zinc-900">
+                                <tr>
+                                    <td class="p-3 text-zinc-300">ارزش خالص خرید خودرو (FOB)</td>
+                                    <td class="p-3 text-left font-mono font-bold text-white" id="invRawPrice">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 text-zinc-300">حقوق و عوارض گمرکی پایه ایران (<span id="invTariffPercent">0%</span>)</td>
+                                    <td class="p-3 text-left font-mono text-amber-500" id="invCustomsDuty">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 text-zinc-300">مالیات بر ارزش افزوده و سهم سلامت (۱۰٪)</td>
+                                    <td class="p-3 text-left font-mono text-zinc-400" id="invVat">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 text-zinc-300">حمل و نقل بین‌المللی ریلی/دریایی و عوارض بندری</td>
+                                    <td class="p-3 text-left font-mono text-zinc-400" id="invShipment">0</td>
+                                </tr>
+                                <tr id="rowScrapped">
+                                    <td class="p-3 text-zinc-300">هزینه خرید گواهی اسقاط خودروهای فرسوده</td>
+                                    <td class="p-3 text-left font-mono text-red-400" id="invScrapped">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Final Estimate Card -->
+                    <div class="bg-gradient-to-r from-amber-600/10 via-yellow-500/5 to-transparent border border-amber-500/20 p-5 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div>
+                            <span class="text-xs text-zinc-400">کل قیمت تمام‌شده ترخیص شده در ایران (تخمینی)</span>
+                            <div class="flex items-baseline gap-1 mt-1">
+                                <span id="finalPriceToman" class="text-3xl font-black text-amber-500">۱.۹۵</span>
+                                <span class="text-sm font-bold text-amber-500">میلیارد تومان</span>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-[10px] bg-amber-500/10 text-amber-500 px-2.5 py-1 rounded-md border border-amber-500/20 font-bold block mb-1 text-center">قیمت کل کلید به کلید</span>
+                            <span class="text-[10px] text-zinc-500">منطبق با ارز انتخابی شما در فرم</span>
+                        </div>
+                    </div>
+
+                    <!-- System Warnings / Logs -->
+                    <div id="warningContainer" class="hidden p-3.5 bg-red-950/40 border border-red-500/30 rounded-xl flex items-start gap-2 text-xs text-red-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                        </svg>
+                        <div class="space-y-1">
+                            <span class="font-bold block">محدودیت‌های قانونی گمرک ایران:</span>
+                            <p id="warningText" class="leading-relaxed"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Panels -->
+                <div class="bg-zinc-900/60 border border-zinc-800/80 p-6 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center gap-4">
+                    <button onclick="sendToWhatsApp()" class="w-full sm:w-1/2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-emerald-900/30 active:scale-[0.98] transition-all">
+                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 3.843 14.058 2.82 11.5 2.819 6.069 2.819 1.644 7.189 1.64 12.62c-.001 1.65.438 3.26 1.272 4.698L1.928 21.07l3.905-1.024-.224-.132-.962-.562zM17.96 14.8c-.326-.164-1.93-.953-2.229-1.062-.3-.109-.517-.164-.734.164-.218.327-.844 1.063-1.034 1.281-.19.219-.38.246-.707.082-1.346-.673-2.274-1.18-3.09-2.58-.216-.37-.024-.544.137-.732.145-.168.326-.381.49-.572.163-.19.217-.327.326-.546.109-.218.055-.41-.027-.573-.082-.164-.734-1.768-1.007-2.422-.266-.64-.537-.55-.734-.56l-.626-.01c-.218 0-.571.082-.871.41-.3.327-1.143 1.118-1.143 2.727s1.17 3.163 1.334 3.382c.163.218 2.3 3.51 5.57 4.924.778.337 1.385.538 1.859.689.782.248 1.494.213 2.057.129.628-.094 1.93-.79 2.201-1.554.271-.764.271-1.418.19-1.554-.082-.136-.3-.218-.626-.382z"/>
+                        </svg>
+                        ارسال پیش‌فاکتور به کارشناس
+                    </button>
+                    <button onclick="copyToClipboard()" class="w-full sm:w-1/2 bg-zinc-950 hover:bg-zinc-900 border border-zinc-800 text-zinc-300 font-bold py-4 px-6 rounded-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                            <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+                        </svg>
+                        کپی فاکتور به حافظه (کلیپ‌بورد)
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Success / Info Custom Modal (No alert allowed) -->
+    <div id="customModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl max-w-sm w-full mx-4 shadow-2xl text-center space-y-4">
+            <div id="modalIconContainer" class="w-12 h-12 rounded-full mx-auto flex items-center justify-center bg-emerald-500/10 text-emerald-500"></div>
+            <div class="space-y-1">
+                <h4 id="modalTitle" class="text-md font-bold text-white">انجام شد</h4>
+                <p id="modalBody" class="text-xs text-zinc-400 leading-relaxed"></p>
+            </div>
+            <button onclick="closeModal()" class="w-full bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-bold py-2.5 rounded-xl transition-colors">بستن پنجره</button>
+        </div>
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="border-t border-zinc-800/60 bg-zinc-950/80 py-4 text-center text-[10px] text-zinc-500">
+        <div class="max-w-7xl mx-auto px-4">
+            طراحی شده با الهام از هویت بصری هلدینگ تجاری عدنان. کلیه محاسبات بر مبنای آخرین مصوبات وزارت صمت و گمرک ایران تدوین شده است.
+        </div>
+    </footer>
+
+    <!-- Logic Engine JS -->
+    <script>
+        // Global Static Configurations (Security Locks)
+        const specialistWhatsAppNumber = "989121234567"; // شماره تلفن اصلی کارشناس هلدینگ عدنان (محفوظ از چشم کاربر عمومی)
+        
+        // --- SECURE CAR DATABASE (IN-MEMORY STABLE STORAGE) ---
+        const carDatabase = [
+            {
+                id: "camry",
+                name: "تویوتا کمری هیبرید",
+                class: "sedan",
+                year: "2025",
+                cylinders: "4",
+                fuel: "hybrid",
+                cc: 2500,
+                price: 28000,
+                imgUrl: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800",
+                badge: "هیبریدی لوکس"
+            },
+            {
+                id: "santafe",
+                name: "هیوندای سانتافه ۲۰۲۵",
+                class: "suv",
+                year: "2025",
+                cylinders: "4",
+                fuel: "gasoline",
+                cc: 2500,
+                price: 34000,
+                imgUrl: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&q=80&w=800",
+                badge: "شاسی‌بلند خانوادگی"
+            },
+            {
+                id: "tesla3",
+                name: "تسلا مدل ۳ (واردات برقی)",
+                class: "ev",
+                year: "2025",
+                cylinders: "0",
+                fuel: "ev",
+                cc: 0,
+                price: 39000,
+                imgUrl: "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&q=80&w=800",
+                badge: "تمام الکتریکی مدرن"
+            },
+            {
+                id: "sportage",
+                name: "کیا اسپورتیج توربو",
+                class: "suv",
+                year: "2024",
+                cylinders: "4",
+                fuel: "gasoline",
+                cc: 2000,
+                price: 27000,
+                imgUrl: "https://images.unsplash.com/photo-1632245889029-e406faaa34cd?auto=format&fit=crop&q=80&w=800",
+                badge: "SUV شهری جوان‌پسند"
+            },
+            {
+                id: "rav4",
+                name: "تویوتا راو۴ هیبرید",
+                class: "suv",
+                year: "2025",
+                cylinders: "4",
+                fuel: "hybrid",
+                cc: 2500,
+                price: 32000,
+                imgUrl: "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&q=80&w=800",
+                badge: "آفرود سبک هیبریدی"
+            },
+            {
+                id: "bmw520",
+                name: "ب‌ام‌و 520i جدید",
+                class: "sedan",
+                year: "2024",
+                cylinders: "4",
+                fuel: "gasoline",
+                cc: 2000,
+                price: 54000,
+                imgUrl: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800",
+                badge: "سدان پریمیوم آلمانی"
+            },
+            {
+                id: "porsche",
+                name: "پورشه ماکان توربو",
+                class: "sports",
+                year: "2024",
+                cylinders: "4",
+                fuel: "gasoline",
+                cc: 2000,
+                price: 64000,
+                imgUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800",
+                badge: "اسپرت لوکس بازرگانان"
+            },
+            {
+                id: "corolla",
+                name: "تویوتا کرولا ۱.۶",
+                class: "sedan",
+                year: "2025",
+                cylinders: "4",
+                fuel: "gasoline",
+                cc: 1600,
+                price: 22000,
+                imgUrl: "https://images.unsplash.com/photo-1623860841263-64f3316d8431?auto=format&fit=crop&q=80&w=800",
+                badge: "سدان اقتصادی و مقاوم"
+            },
+            {
+                id: "custom",
+                name: "⚠️ سایر خودروها (واردات سفارشی)",
+                class: "sedan",
+                year: "2025",
+                cylinders: "4",
+                fuel: "gasoline",
+                cc: 2000,
+                price: 25000,
+                imgUrl: "",
+                badge: "سفارشی عدنان"
+            }
+        ];
+
+        // High Quality Generic placeholders for Custom Mode fallback based on Class
+        const classFallbackImages = {
+            sedan: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=800",
+            suv: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800",
+            sports: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800",
+            ev: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=800"
+        };
+
+        let currentPlateType = 'melli';
+        let currentCarClass = 'sedan';
+        let viewMode = 'real'; // Toggle views: 'technical' or 'real'
+
+        // Selectors
+        const carDbSelect = document.getElementById('carDbSelect');
+        const customModelWrapper = document.getElementById('customModelWrapper');
+        const carModelInput = document.getElementById('carModel');
+        const carYearSelect = document.getElementById('carYear');
+        const carCylindersSelect = document.getElementById('carCylinders');
+        const carFuelSelect = document.getElementById('carFuel');
+        const carCCInput = document.getElementById('carCC');
+        const carPriceSlider = document.getElementById('carPrice');
+        const dollarRateInput = document.getElementById('dollarRateInput');
+        const carQuotaSelect = document.getElementById('carQuota');
+
+        const priceLabel = document.getElementById('priceLabel');
+        const finalPriceTomanText = document.getElementById('finalPriceToman');
+        const warningContainer = document.getElementById('warningContainer');
+        const warningText = document.getElementById('warningText');
+
+        // Invoice Element Selectors
+        const invRawPrice = document.getElementById('invRawPrice');
+        const invTariffPercent = document.getElementById('invTariffPercent');
+        const invCustomsDuty = document.getElementById('invCustomsDuty');
+        const invVat = document.getElementById('invVat');
+        const invShipment = document.getElementById('invShipment');
+        const invScrapped = document.getElementById('invScrapped');
+        const rowScrapped = document.getElementById('rowScrapped');
+
+        // Dynamic Plate Layouts
+        const plateLayouts = {
+            melli: document.getElementById('plate-layout-melli'),
+            gozar: document.getElementById('plate-layout-gozar'),
+            azad: document.getElementById('plate-layout-azad'),
+            classic: document.getElementById('plate-layout-classic')
+        };
+
+        // Live Custom Plate sync inputs
+        const pNumL = document.getElementById('plateNumL');
+        const pAlpha = document.getElementById('plateAlpha');
+        const pNumR = document.getElementById('plateNumR');
+        const pProv = document.getElementById('plateProvince');
+
+        // Event Listeners for Plate Customization
+        [pNumL, pAlpha, pNumR, pProv].forEach(input => {
+            input.addEventListener('input', syncCustomPlateText);
+        });
+
+        // Initialize App
+        window.onload = function() {
+            populateDatabaseDropdown();
+            onDatabaseCarSelect(); // Set default selected Camry
+            syncCustomPlateText();
+            setViewMode('real'); // Default beautiful gallery image view
+        };
+
+        // Populate database items into select dropdown
+        function populateDatabaseDropdown() {
+            carDbSelect.innerHTML = "";
+            carDatabase.forEach(car => {
+                const opt = document.createElement('option');
+                opt.value = car.id;
+                opt.textContent = car.name;
+                carDbSelect.appendChild(opt);
+            });
+        }
+
+        // On selecting any item from Database select
+        function onDatabaseCarSelect() {
+            const selectedId = carDbSelect.value;
+            const car = carDatabase.find(c => c.id === selectedId);
+            
+            if (!car) return;
+
+            if (car.id === 'custom') {
+                customModelWrapper.classList.remove('hidden');
+                carModelInput.value = "";
+            } else {
+                customModelWrapper.classList.add('hidden');
+                carModelInput.value = car.name;
+                carYearSelect.value = car.year;
+                carCylindersSelect.value = car.cylinders;
+                carFuelSelect.value = car.fuel;
+                carCCInput.value = car.cc;
+                carPriceSlider.value = car.price;
+                setCarClass(car.class, false); // Avoid trigger-loops
+            }
+
+            syncStateAndGallery(car);
+            calculateEverything();
+        }
+
+        // On any manual input change
+        function onManualInputChange() {
+            const year = carYearSelect.value;
+            const cylinders = carCylindersSelect.value;
+            const fuel = carFuelSelect.value;
+            const cc = parseInt(carCCInput.value) || 0;
+            const price = parseInt(carPriceSlider.value);
+            
+            // Try to find a matching car in the database to snap back to
+            const matchedCar = carDatabase.find(car => 
+                car.id !== 'custom' &&
+                car.class === currentCarClass &&
+                car.fuel === fuel &&
+                car.cc === cc &&
+                car.price === price &&
+                car.year === year &&
+                car.cylinders === cylinders
+            );
+
+            if (matchedCar) {
+                carDbSelect.value = matchedCar.id;
+                customModelWrapper.classList.add('hidden');
+                syncStateAndGallery(matchedCar);
+            } else {
+                carDbSelect.value = 'custom';
+                customModelWrapper.classList.remove('hidden');
+                syncStateAndGallery(null);
+            }
+
+            calculateEverything();
+        }
+
+        // Updates Gallery Elements and visual states
+        function syncStateAndGallery(car) {
+            const imgElement = document.getElementById('realCarImage');
+            const loaderElement = document.getElementById('imageLoader');
+            const badgeElement = document.getElementById('realCarBadge');
+            const nameElement = document.getElementById('realCarName');
+
+            if (!car || car.id === 'custom') {
+                // If Custom/Manual: dynamically get fallback image based on current Class
+                const fallbackUrl = classFallbackImages[currentCarClass];
+                loaderElement.style.opacity = '1';
+                loaderElement.style.display = 'flex';
+                
+                imgElement.src = fallbackUrl;
+                badgeElement.textContent = "سفارشی - " + getPersianClassName(currentCarClass);
+                nameElement.textContent = carModelInput.value || "واردات سفارشی شما";
+                
+                badgeElement.className = "text-[10px] uppercase font-bold text-black bg-amber-500 px-2 py-0.5 rounded-md block w-max mb-1.5 shadow";
+                
+                imgElement.onload = function() {
+                    loaderElement.style.opacity = '0';
+                    setTimeout(() => { loaderElement.style.display = 'none'; }, 300);
+                };
+                return;
+            }
+
+            // If matched database car: show exact details
+            loaderElement.style.opacity = '1';
+            loaderElement.style.display = 'flex';
+
+            imgElement.src = car.imgUrl;
+            badgeElement.textContent = car.badge;
+            nameElement.textContent = car.name;
+
+            // Class-based badge colors
+            if (car.class === 'ev') {
+                badgeElement.className = "text-[10px] uppercase font-bold text-black bg-cyan-400 px-2 py-0.5 rounded-md block w-max mb-1.5 shadow";
+            } else {
+                badgeElement.className = "text-[10px] uppercase font-bold text-black bg-amber-500 px-2 py-0.5 rounded-md block w-max mb-1.5 shadow";
+            }
+
+            imgElement.onload = function() {
+                loaderElement.style.opacity = '0';
+                setTimeout(() => { loaderElement.style.display = 'none'; }, 300);
+            };
+        }
+
+        function getPersianClassName(cls) {
+            if (cls === 'sedan') return 'سدان';
+            if (cls === 'suv') return 'شاسی بلند';
+            if (cls === 'sports') return 'اسپرت';
+            if (cls === 'ev') return 'برقی';
+            return 'سفارشی';
+        }
+
+        // Handle image loading failure gracefully (Fallback static visual)
+        function handleImageLoadError() {
+            const imgElement = document.getElementById('realCarImage');
+            const loaderElement = document.getElementById('imageLoader');
+            imgElement.src = "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=800"; // Solid high-quality backup car
+            loaderElement.style.display = 'none';
+        }
+
+        // Updates text and details inside real preview even when manually edited
+        function updateRealCarDetailsOnManualChange() {
+            const nameElement = document.getElementById('realCarName');
+            nameElement.textContent = carModelInput.value || "خودرو نامشخص";
+        }
+
+        // Switches view modes inside canvas area
+        function setViewMode(mode) {
+            viewMode = mode;
+            const btnTech = document.getElementById('btn-view-tech');
+            const btnReal = document.getElementById('btn-view-real');
+            const techContainer = document.getElementById('techViewContainer');
+            const realContainer = document.getElementById('realViewContainer');
+
+            if (mode === 'technical') {
+                btnTech.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all bg-amber-500 text-black shadow";
+                btnReal.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all text-zinc-400 hover:text-white";
+                techContainer.classList.remove('hidden');
+                realContainer.classList.add('hidden');
+            } else {
+                btnReal.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all bg-amber-500 text-black shadow";
+                btnTech.className = "px-3 py-1 text-[10px] font-bold rounded-lg transition-all text-zinc-400 hover:text-white";
+                realContainer.classList.remove('hidden');
+                techContainer.classList.add('hidden');
+            }
+        }
+
+        // Interactive Canvas Hotspot Highlight & Focus Utility
+        function focusAndHighlight(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                // Smooth scroll directly to focused section on form
+                section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                section.classList.add('ring-2', 'ring-amber-500', 'duration-300');
+                
+                // Directly trigger input focus to let user type/slide immediately
+                if (sectionId === 'section-engine') {
+                    carCCInput.focus();
+                } else if (sectionId === 'section-year') {
+                    carYearSelect.focus();
+                } else if (sectionId === 'section-price') {
+                    carPriceSlider.focus();
+                } else if (sectionId === 'section-plate') {
+                    pNumL.focus();
+                }
+                
+                // Show tooltip feedback
+                const alertText = document.getElementById('activeHotspotAlert');
+                alertText.textContent = "بخش مربوطه فعال شد!";
+                
+                setTimeout(() => {
+                    section.classList.remove('ring-2', 'ring-amber-500');
+                    alertText.textContent = "روی بخش‌های طلایی کلیک کنید";
+                }, 1500);
+            }
+        }
+
+        // Dynamic Car Class Changer
+        function setCarClass(className, triggerStateSync = true) {
+            currentCarClass = className;
+            
+            // Sync Visual Buttons Styles
+            document.querySelectorAll('.car-class-btn').forEach(btn => {
+                btn.className = "car-class-btn p-2 rounded-xl border text-center transition-all border-zinc-800 bg-zinc-950/50 text-zinc-400 hover:border-zinc-700";
+            });
+            const activeBtn = document.getElementById(`btn-class-${className}`);
+            if (activeBtn) {
+                activeBtn.className = "car-class-btn p-2 rounded-xl border text-center transition-all bg-amber-500/10 border-amber-500/50 text-amber-500";
+            }
+
+            // Instantly toggle SVG car models visibility using absolute JS styling (safest approach)
+            ['sedan', 'suv', 'sports', 'ev'].forEach(cls => {
+                const group = document.getElementById(`car-g-${cls}`);
+                if (group) {
+                    group.style.display = (cls === className) ? 'block' : 'none';
+                }
+            });
+
+            if (triggerStateSync) {
+                onManualInputChange();
+            }
+        }
+
+        // Set Licence Plate Type
+        function setPlateType(plateType) {
+            currentPlateType = plateType;
+
+            // Sync Buttons
+            document.querySelectorAll('.plate-btn').forEach(btn => {
+                btn.className = "plate-btn py-2.5 px-3 rounded-xl border text-xs font-bold text-zinc-400 border-zinc-800 bg-zinc-950/50 hover:border-zinc-700 text-center transition-all";
+            });
+            const activeBtn = document.getElementById(`btn-${plateType}`);
+            if (activeBtn) {
+                activeBtn.className = "plate-btn py-2.5 px-3 rounded-xl border text-xs font-bold text-center transition-all bg-amber-500/10 border-amber-500/50 text-amber-500 shadow-md";
+            }
+
+            // Sync auto values
+            if (plateType === 'classic') {
+                carYearSelect.value = '1990';
+            } else if (carYearSelect.value === '1990') {
+                carYearSelect.value = '2025';
+            }
+
+            calculateEverything();
+        }
+
+        // Synchronize Customizable Plate numbers on the physical view
+        function syncCustomPlateText() {
+            const numL = pNumL.value;
+            const alpha = pAlpha.value;
+            const numR = pNumR.value;
+            const prov = pProv.value;
+
+            // Melli Plate Sync
+            document.getElementById('txtPlateL').textContent = numL;
+            document.getElementById('txtPlateAlpha').textContent = alpha;
+            document.getElementById('txtPlateR').textContent = numR;
+            document.getElementById('txtPlateProv').textContent = prov;
+
+            // Gozar Plate Sync
+            document.getElementById('txtPlateL-g').textContent = numL;
+            document.getElementById('txtPlateR-g').textContent = numR;
+
+            // Azad Plate Sync
+            document.getElementById('txtPlateL-a').textContent = numL + numR;
+            document.getElementById('txtPlateR-a').textContent = numL + numR;
+
+            // Classic Plate Sync
+            document.getElementById('txtPlateL-c').textContent = numR;
+        }
+
+        // Advanced Calculation Engine
+        function calculateEverything() {
+            // Raw Inputs
+            const model = carModelInput.value || 'خودرو نامشخص';
+            const year = parseInt(carYearSelect.value);
+            const cylinders = parseInt(carCylindersSelect.value);
+            const fuel = carFuelSelect.value;
+            const cc = parseInt(carCCInput.value) || 0;
+            const fobPriceUsd = parseInt(carPriceSlider.value);
+            const exchangeRate = parseInt(dollarRateInput.value) || 60000;
+            const quota = carQuotaSelect.value;
+
+            priceLabel.textContent = `$${fobPriceUsd.toLocaleString()}`;
+
+            // 1. Customs Tariff calculations
+            let tariffPercent = 0;
+            if (fuel === 'gasoline') {
+                if (cc <= 1500) tariffPercent = 55;
+                else if (cc <= 2000) tariffPercent = 75;
+                else if (cc <= 2500) tariffPercent = 95;
+                else tariffPercent = 135;
+            } else if (fuel === 'hybrid') {
+                if (cc <= 1500) tariffPercent = 15;
+                else if (cc <= 2000) tariffPercent = 25;
+                else if (cc <= 2500) tariffPercent = 45;
+                else tariffPercent = 75;
+            } else if (fuel === 'ev') {
+                tariffPercent = 15; // Low incentive tariff for pure EVs
+            }
+
+            // Apply Plate Specific reductions
+            if (currentPlateType === 'azad') {
+                // Free zones are exempt from massive duties
+                tariffPercent = Math.max(10, Math.round(tariffPercent * 0.35));
+            } else if (currentPlateType === 'gozar' || currentPlateType === 'classic') {
+                // Temporary status pays Carnet de Passage assurance, roughly 15% of equivalent import duties
+                tariffPercent = Math.max(5, Math.round(tariffPercent * 0.15));
+            }
+
+            // Apply special quota benefits
+            if (quota === 'veteran') {
+                // Veterans enjoy 80% Customs Duty discount
+                tariffPercent = Math.round(tariffPercent * 0.2);
+            }
+
+            // Calculation Values
+            const rawCostToman = fobPriceUsd * exchangeRate;
+            const customsDutyToman = (rawCostToman * tariffPercent) / 100;
+            
+            // Logistics based on Car Body Class
+            let logisticsUsd = 1800; // Base Sedan Shipment
+            if (currentCarClass === 'suv') logisticsUsd = 2500;
+            else if (currentCarClass === 'sports') logisticsUsd = 2200;
+            else if (currentCarClass === 'ev') logisticsUsd = 1500;
+
+            const logisticsToman = logisticsUsd * exchangeRate;
+
+            // VAT (10% on Raw + Customs)
+            let vatToman = (rawCostToman + customsDutyToman) * 0.10;
+            if (quota === 'freezone' || currentPlateType === 'azad') {
+                vatToman = 0; // Free zones are VAT exempt
+            }
+
+            // Scrapped car certificate requirements
+            let scrappedCertificateCostToman = 0;
+            if (currentPlateType === 'melli') {
+                if (quota === 'normal') {
+                    // Normal importers must scrap 1-2 cars (approx $1,500 equivalent)
+                    scrappedCertificateCostToman = 1500 * exchangeRate;
+                    rowScrapped.classList.remove('hidden');
+                } else {
+                    rowScrapped.classList.add('hidden');
+                }
+            } else {
+                rowScrapped.classList.add('hidden');
+            }
+
+            // Grand Total Cost
+            const totalToman = rawCostToman + customsDutyToman + logisticsToman + vatToman + scrappedCertificateCostToman;
+
+            // Update Invoice Screen Table
+            invRawPrice.textContent = `${(rawCostToman / 1e9).toFixed(2)} میلیارد ت ($${fobPriceUsd.toLocaleString()})`;
+            invTariffPercent.textContent = `${tariffPercent}%`;
+            invCustomsDuty.textContent = `${(customsDutyToman / 1e6).toFixed(0)} میلیون تومان`;
+            invVat.textContent = `${(vatToman / 1e6).toFixed(0)} میلیون تومان`;
+            invShipment.textContent = `${(logisticsToman / 1e6).toFixed(0)} میلیون تومان ($${logisticsUsd})`;
+            invScrapped.textContent = `${(scrappedCertificateCostToman / 1e6).toFixed(0)} میلیون تومان`;
+
+            // Big Total display
+            finalPriceTomanText.textContent = (totalToman / 1e9).toFixed(2);
+
+            // Sync Permit & Vacation limit indicators
+            const permitTitle = document.getElementById('permitTitle');
+            const permitDesc = document.getElementById('permitDesc');
+            const permitDays = document.getElementById('permitDays');
+            const permitCircle = document.getElementById('permitCircle');
+
+            let days = 365;
+            let percent = 100;
+            let title = "میزان مرخصی و تردد سالانه (بدون محدودیت)";
+            let desc = "خودروهای دارای پلاک ملی هیچ‌گونه محدودیتی برای حضور در جاده‌ها و شهرهای سراسر کشور ندارند.";
+
+            if (currentPlateType === 'gozar') {
+                days = 90;
+                percent = 25; // 90 out of 365
+                title = "میزان مرخصی گذر موقت (۳ ماه در سال)";
+                desc = "خودروی گذر موقت باید پس از انقضای مهلت ۳ ماهه بلافاانے از کشور خارج یا به گمرک مربوطه تحویل داده شود.";
+            } else if (currentPlateType === 'azad') {
+                days = 30;
+                percent = 8; // 30 out of 365
+                title = "میزان مرخصی ورود به سرزمین اصلی (۳۰ روز در سال)";
+                desc = "خودروهای منطقه آزاد تجاری مجاز هستند سالانه حداکثر ۱ ماه با دریافت پلاک گذر موقت وارد سرزمین اصلی شوند.";
+            } else if (currentPlateType === 'classic') {
+                days = 15;
+                percent = 4;
+                title = "محدودیت تردد خودروهای کلاسیک/تاریخی";
+                desc = "تردد روزمره دائم با پلاک تاریخی ممنوع است و صرفاً جهت شرکت در رویدادها، تعمیرات یا ترددهای بسیار ضروری صادر می‌شود.";
+            }
+
+            permitTitle.textContent = title;
+            permitDesc.textContent = desc;
+            permitDays.textContent = days;
+
+            // Visual Progress Circle DashOffset calculations
+            const radius = 24;
+            const circumference = 2 * Math.PI * radius;
+            const offset = circumference - (percent / 100) * circumference;
+            permitCircle.style.strokeDasharray = `${circumference}`;
+            permitCircle.style.strokeDashoffset = `${offset}`;
+
+            // Sync Plate layouts
+            Object.keys(plateLayouts).forEach(key => {
+                plateLayouts[key].classList.add('hidden');
+            });
+            plateLayouts[currentPlateType].classList.remove('hidden');
+
+            // Generate Warning/System Logs
+            let warnings = [];
+            if (currentPlateType === 'melli') {
+                if (cc > 2500) warnings.push("ورود خودروهای بالای ۲۵۰۰ سی‌سی با پلاک ملی ایران با ممنوعیت‌های بسیار سخت‌گیرانه گمرکی روبه‌رو است.");
+                if (year < 2020) warnings.push("واردات خودرو با سن بالاتر از ۵ سال جهت دریافت پلاک ملی غیرمجاز است.");
+                if (cylinders > 6) warnings.push("پیشرانه‌های حجیم ۸ سیلندر به علت مالیات سنگین آلایندگی، شماره‌گذاری دشواری خواهند داشت.");
+            } else if (currentPlateType === 'classic' && year > 1996) {
+                warnings.push("پلاک تاریخی صرفاً متعلق به خودروهای عتیقه و با عمر بالای ۳۰ سال است. سال ساخت خودروی انتخابی شما هنوز برای پلاک تاریخی مناسب نیست.");
+            }
+
+            if (warnings.length > 0) {
+                warningContainer.classList.remove('hidden');
+                warningText.innerHTML = warnings.map(w => `• ${w}`).join('<br>');
+            } else {
+                warningContainer.classList.add('hidden');
+            }
+        }
+
+        // Build Dynamic Text Payload for Messenger copy/shares
+        function generateReportText() {
+            const model = carModelInput.value || 'خودرو نامشخص';
+            const year = carYearSelect.options[carYearSelect.selectedIndex].text;
+            const cylinders = carCylindersSelect.options[carCylindersSelect.selectedIndex].text;
+            const fuel = carFuelSelect.options[carFuelSelect.selectedIndex].text;
+            const cc = carCCInput.value || 1500;
+            const fobPriceUsd = parseInt(carPriceSlider.value);
+            const exchangeRate = dollarRateInput.value;
+            const quota = carQuotaSelect.options[carQuotaSelect.selectedIndex].text;
+            const finalPrice = finalPriceTomanText.textContent;
+
+            let plateName = "ملی (سراسر کشور)";
+            if (currentPlateType === 'gozar') plateName = "گذر موقت (۳ ماه)";
+            else if (currentPlateType === 'azad') plateName = "مناطق آزاد تجاری";
+            else if (currentPlateType === 'classic') plateName = "کلاسیک / تاریخی";
+
+            return `👑 هلدینگ تجاری عدنان - شبیه‌ساز واردات خودرو 👑
+
+🚗 مشخصات خودروی استعلام شده:
+• خودرو: ${model} (${currentCarClass.toUpperCase()})
+• سال ساخت: ${year}
+• مشخصات فنی: ${cc} سی‌سی - ${cylinders}
+• نوع سوخت: ${fuel}
+• سهمیه اعمال‌شده: ${quota}
+• قیمت پایه (FOB): $${fobPriceUsd.toLocaleString()} (نرخ دلار: ${parseInt(exchangeRate).toLocaleString()} ت)
+
+📋 پلاک و گمرک ایران:
+• نوع پلاک انتخابی: ${plateName}
+• تعرفه گمرکی: ${invTariffPercent.textContent} (معادل ${invCustomsDuty.textContent})
+• عوارض مالیات ارزش افزوده: ${invVat.textContent}
+
+💵 برآورد نهایی هزینه تمام‌شده:
+• قیمت کلید به کلید در ایران: حدود ${finalPrice} میلیارد تومان
+
+------------------------------------------
+مدیر محترم، من این محاسبات را از روی وب‌سایت هلدینگ عدنان انجام دادم و مایل به مشورت نهایی با کارشناس واردات هلدینگ هستم.`;
+        }
+
+        // Action: Push straight to WhatsApp securely without exposing number to user
+        function sendToWhatsApp() {
+            const phone = specialistWhatsAppNumber;
+            const text = generateReportText();
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        // Action: Copy report
+        function copyToClipboard() {
+            const report = generateReportText();
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = report;
+            dummy.select();
+            
+            try {
+                document.execCommand("copy");
+                showModal("کپی موفقیت‌آمیز", "پیش‌فاکتور کامل با موفقیت کپی شد! می‌توانید آن را در هر پیام‌رسانی پیست کنید.", true);
+            } catch (err) {
+                showModal("خطا در کپی", "متاسفانه دسترسی به حافظه موقت سیستم مقدور نیست.", false);
+            }
+            document.body.removeChild(dummy);
+        }
+
+        // Modal Utilities
+        function showModal(title, body, isSuccess) {
+            const modal = document.getElementById('customModal');
+            const mTitle = document.getElementById('modalTitle');
+            const mBody = document.getElementById('modalBody');
+            const mIconContainer = document.getElementById('modalIconContainer');
+
+            mTitle.textContent = title;
+            mBody.textContent = body;
+
+            if (isSuccess) {
+                mIconContainer.className = "w-12 h-12 rounded-full mx-auto flex items-center justify-center bg-emerald-500/10 text-emerald-500";
+                mIconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>`;
+            } else {
+                mIconContainer.className = "w-12 h-12 rounded-full mx-auto flex items-center justify-center bg-red-500/10 text-red-500";
+                mIconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>`;
+            }
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('customModal');
+            modal.classList.remove('opacity-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+</body>
+</html>
